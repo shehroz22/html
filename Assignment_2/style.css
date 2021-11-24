@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(174, 190, 174);
+}
+.grey {
+  color: gray;
+  font-family: sans-serif;
+}
+.heading {
+  margin: auto;
+  width: 50%;
+  font-family: sans-serif;
+}
+.small {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}

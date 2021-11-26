@@ -17,5 +17,12 @@ body {
 .mpd {
   background: rgba(178, 228, 63, 0.3);
   margin: 40px 20px 30px 20px;
-  padding: 50px 20px 30px 20px;
+  padding: 60px 20px 30px 20px;
+}
+.mpd :hover {
+  background-color: aqua;
+  transition: 4s;
+}
+.padding :active {
+  color: blueviolet;
 }

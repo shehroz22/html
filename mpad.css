@@ -1,0 +1,21 @@
+body {
+  background: rgb(216, 133, 133, 0.3);
+}
+.margin {
+  background: salmon;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.padding {
+  background: seagreen;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 60px;
+  padding-bottom: 80px;
+}
+.mpd {
+  background: rgba(178, 228, 63, 0.3);
+  margin: 40px 20px 30px 20px;
+  padding: 50px 20px 30px 20px;
+}

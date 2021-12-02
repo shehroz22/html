@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta name="shehroz" content="menue added" />
+
     <title>The proper structure</title>
     <style>
       body {
@@ -26,6 +29,29 @@
           font-size: 30px;
         }
       }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .b-link {
+        display: none;
+        position: absolute;
+        background-color: rgb(132, 150, 132, 0.3);
+        font-size: 20px;
+        width: auto;
+        padding-top: 10px;
+      }
+
+      .dropdown:hover .b-link {
+        display: block;
+      }
+      a:hover {
+        background-color: rgb(248, 41, 41, 0.3);
+        transition: 3s;
+      }
     </style>
   </head>
   <body>
@@ -40,7 +66,22 @@
     </header>
     <br /><br />
     <nav style="background-color: rgb(77, 28, 122, 0.3); height: 40px">
-      <a style="text-decoration: none" href="">Red</a> &nbsp;
+      <div class="dropdown">
+        <button class="button">menue</button>
+        <div class="b-link">
+          <a
+            style="color: black; text-decoration: none; font-size: 12px"
+            href="https://www.google.com/"
+            >google</a
+          >
+          <a
+            style="color: black; text-decoration: none; font-size: 12px"
+            href="https://www.yahoo.com/"
+            >yahoo</a
+          >
+        </div>
+      </div>
+
       <a href=""> Blue</a> &nbsp; <a href="">Green</a>
     </nav>
     <aside
@@ -61,6 +102,7 @@
     <section>
       <article style="width: 30%; margin-top: 70px">
         <h1>section 1</h1>
+
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore
           exercitationem, eos beatae ratione sit minus dolores harum est neque.

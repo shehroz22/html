@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The proper structure</title>
+    <style>
+      body {
+        background-image: url(./light.jpg);
+        padding: 0;
+        margin: 0%;
+        width: auto;
+
+        background-attachment: fixed;
+      }
+      a:active {
+        color: crimson;
+      }
+      article:hover {
+        background-color: gray;
+        transition: 3s;
+      }
+      @media screen and (min-width: 400px) {
+        aside {
+          background-color: crimson;
+        }
+        article {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        text-align: center;
+        background-color: rgb(60, 60, 245, 0.3);
+        height: 40px;
+      "
+    >
+      HEADER
+    </header>
+    <br /><br />
+    <nav style="background-color: rgb(77, 28, 122, 0.3); height: 40px">
+      <a style="text-decoration: none" href="">Red</a> &nbsp;
+      <a href=""> Blue</a> &nbsp; <a href="">Green</a>
+    </nav>
+    <aside
+      style="
+        width: 20%;
+        float: right;
+        padding-top: 20px;
+        border: chocolate solid 1px;
+        margin-top: 60px;
+      "
+    >
+      <h1 style="text-align: center">ASIDE</h1>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. A omnis esse
+      mollitia tenetur doloribus molestiae, atque, expedita iure deserunt
+      voluptates laudantium! Itaque quos, maxime vel impedit suscipit excepturi
+      possimus odit?
+    </aside>
+    <section>
+      <article style="width: 30%; margin-top: 70px">
+        <h1>section 1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labore
+          exercitationem, eos beatae ratione sit minus dolores harum est neque.
+          Labore vero pariatur error ipsum quo officiis. Sapiente, distinctio
+          temporibus!
+        </p>
+        <figure>
+          <img style="height: 50px; width: 50px" src="./logo.jpg" alt="logo" />
+          <figcaption>picture from folder</figcaption>
+        </figure>
+        <p>message from me</p>
+        <p><samp>file not found</samp></p>
+      </article>
+    </section>
+
+    <section style="width: 40%; padding-top: 50px">
+      <article>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, illo
+          illum nobis quisquam voluptatem nemo maxime ullam nesciunt tenetur
+          velit asperiores dolorem rerum, eos nisi tempora aspernatur
+          exercitationem magnam incidunt?
+        </p>
+        <iframe
+          src="https://www.walmart.com/ip/GreenDecor-Polyester-Fabric-5x7ft-Wedding-Photography-Tips-Studio-Background-Bacdrops-Night-Moon-Glitter-Stars-Blue-Sky/985113793?wmlspartner=wlpa&selectedSellerId=101106503"
+          height="100px"
+          width="200px"
+          frameborder="none"
+        ></iframe>
+      </article>
+    </section>
+    <footer style="background-color: rgb(128, 161, 223, 0.5)">
+      <address style="padding-top: 50px">
+        Name xyz <br />
+        <br />address: 12jhl email <br /><br />
+        shehriz@gmail.com
+      </address>
+    </footer>
+  </body>
+</html>

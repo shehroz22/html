@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="title" content="The Alpha-one" />
+
+    <title>The Alpha-one</title>
+    <style>
+      .form {
+        font-size: 40px;
+        color: white;
+      }
+      body {
+        background-image: url(../robot.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .banner:hover {
+        color: cornflowerblue;
+        transition: 3s;
+      }
+      .details {
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body style="padding: 0%; margin: 0%">
+    <h1
+      class="banner"
+      title="alpha"
+      style="
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 50px;
+        padding-top: 20px;
+        margin-top: 0%;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+      "
+    >
+      The Alpha-one
+    </h1>
+    <section>
+      <article>
+        <p style="width: 20%; color: cornsilk">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quo
+          architecto tenetur accusantium officia placeat fugiat, dolorum,
+          voluptatum ullam nemo ducimus, quos rerum! Dicta aperiam animi non
+          nesciunt quia quae.
+        </p>
+      </article>
+    </section>
+    <footer
+      class="form"
+      style="
+        background-color: rgb(17, 20, 40, 0.5);
+        height: 300px;
+        margin-top: 63px;
+      "
+    >
+      <p>Enter your Details</p>
+      <form class="details" action="" method="post">
+        <label for="Name"> Name </label>
+        <input type="text" maxlength="6" name="username" /> <br />
+        <label for="Email"> Email</label>
+        <input type="email" maxlength="24" name="email" /> <br />
+        <p>Already employed <input type="checkbox" name="male" /></p>
+
+        <label for="Number">Number</label>
+        <input type="number" maxlength="5" name="number" />
+        <br />
+        <label for="radio"> Gender</label>
+        <input type="radio" name="gender" value="css" name="gender" />
+        <input type="radio" name="gender" value="css" name="gender" />
+      </form>
+      <button type="submit">click here</button>
+      <br /><br />
+      <p>&copy; copy right by 2021</p>
+    </footer>
+  </body>
+</html>

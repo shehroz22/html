@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>float-overflow-descendent</title>
+    <style>
+      .blue {
+        background-color: tomato;
+        width: 30%;
+        padding: 30px;
+        margin: 20px;
+        height: 20px;
+
+        overflow-x: scroll;
+      }
+      .green {
+        background-color: rgb(71, 255, 102);
+        width: 70%;
+        padding: 50px;
+
+        height: 90px;
+        float: right;
+      }
+      .green > p {
+        color: tomato;
+      }
+      .yellow {
+        background-color: yellow;
+        width: 40%;
+        position: absolute;
+        top: 350px;
+      }
+      .green ~ .yellow {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blue">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
+      dolores ea fuga nisi nam, cumque eum voluptate provident harum quasi ab
+      repellendus minima numquam distinctio est blanditiis, officiis soluta?
+      Animi?
+    </div>
+    <div class="green">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
+      dolores ea fuga nisi nam, cumque eum voluptate provident harum quasi ab
+      repellendus minima numquam distinctio est blanditiis, officiis soluta?
+      Animi?
+      <p>hi how are you</p>
+    </div>
+    <div class="yellow">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quibusdam
+      quidem officiis cum, ipsam delectus commodi ab
+    </div>
+  </body>
+</html>

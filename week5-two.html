@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>specific practice</title>
+  </head>
+  <style>
+    .relativ {
+      border: 12px solid red;
+      position: relative;
+      width: 70%;
+      height: 60px;
+      left: 0px;
+      top: 400px;
+
+      background-color: salmon;
+    }
+    .absolut {
+      border: 12px solid red;
+      width: 60%;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0px;
+    }
+    .fixed {
+      background-color: seagreen;
+      border: 3px solid;
+      width: 90px;
+      position: fixed;
+      right: 10px;
+      left: 90px;
+    }
+    .absolut2 {
+      background-color: tomato;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  </style>
+  <body>
+    <p class="relativ">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus unde
+    </p>
+    <p class="absolut">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus unde
+    </p>
+
+    <div class="fixed">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus unde
+      officia aliquam facere perferendis autem officiis,
+      <span class="absolut2">voluptate nihil quia! Ducimus magni fugiat </span
+      >quas necessitatibus, nemo eos dolore quis amet quasi.
+    </div>
+  </body>
+</html>

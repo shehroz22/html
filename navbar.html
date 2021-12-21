@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>navbar</title>
+    <style>
+      a:link {
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: blue;
+      }
+      .horibar {
+        display: flex;
+        justify-content: space-between;
+        background-color: aqua;
+        padding: 30px;
+        font-size: 14px;
+      }
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 15vw;
+        left: 80vw;
+        background-color: brown;
+        padding: 40px;
+      }
+      .talk:hover ~ .dropdown {
+        display: block;
+      }
+      body {
+        margin: 0%;
+        padding: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul style="list-style: none" class="horibar">
+      <li><a href="">Contacts</a></li>
+      <li><a href="">services</a></li>
+      <li><a href="">call</a></li>
+      <li><a href="">logs</a></li>
+      <li class="talk"><a href="">faq</a></li>
+
+      <div class="dropdown">
+        <li>chat</li>
+        <br />
+        <li>ask</li>
+        <br />
+        <li>call</li>
+      </div>
+    </ul>
+  </body>
+</html>

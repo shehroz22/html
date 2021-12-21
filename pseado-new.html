@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>page</title>
+    <style>
+      :root {
+        background-image: url(./unnamed.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+      .banner {
+        /*  background-color: rgba(0, 0, 54, 0.5);*/
+        color: rgb(255, 255, 255, 0.3);
+        text-align: center;
+        font-family: monospace;
+        font-size: 30px;
+
+        padding: 40px;
+        margin: 0%;
+      }
+
+      body {
+        padding: 0%;
+        margin: 0%;
+      }
+      aside {
+        width: 130px;
+        float: right;
+        border: 2px gray solid;
+        color: white;
+      }
+      p:only-of-type {
+        color: rgb(26, 53, 112);
+      }
+      p:nth-of-type(4) {
+        background-color: rgb(73, 20, 11);
+      }
+      .second {
+        border: white 2px solid;
+        color: white;
+        width: 60%;
+        padding-left: 20px;
+        margin-top: 30px;
+      }
+      div {
+        color: royalblue;
+      }
+      :not(div) {
+        color: red;
+      }
+      input:valid {
+        background-color: rgb(19, 139, 19);
+      }
+      p:last-child {
+        background-color: salmon;
+      }
+      p:nth-child(even) {
+        color: white;
+      }
+      /* :root{background-color:red}*/
+      input:read-only {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 title="pseaodo" class="banner">pseaudo Class</h1>
+
+      <aside class="aside">
+        <h3>nth tpe and only type</h3>
+        <div>
+          <p>this is only of type</p>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+          nobis
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          iure
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+          exercitationem quisquam cum
+        </p>
+      </aside>
+      <article class="second">
+        <section>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div>
+            <input type="text " minlength="4" maxlength="5" />
+          </div>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <input type="text" value="hi how are you my friend" readonly /><br />
+        </section>
+      </article>
+    </header>
+    <footer></footer>
+  </body>
+</html>

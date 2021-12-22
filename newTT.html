@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>newTT</title>
+  </head>
+  <style>
+    h2::before {
+      counter-increment: section;
+      content: counters(section, ".") " ";
+    }
+    input[type*="search"] {
+      background-color: darkorchid;
+      width: 100%;
+    }
+    .block {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: darksalmon;
+    }
+    h1 {
+      display: block;
+      background-color: darkseagreen;
+      width: 90px;
+      height: 60px;
+      margin: 0px;
+    }
+  </style>
+  <body>
+    <h2>Heading</h2>
+    <h2>heading</h2>
+    <h2>Heading</h2>
+    <h2>Heading</h2>
+    <input type="search" name="search" id="" placeholder="search" />
+    <hr />
+    <div class="block">
+      <h1>one</h1>
+      <h1>one</h1>
+      <h1>one</h1>
+      <h1>one</h1>
+    </div>
+  </body>
+</html>

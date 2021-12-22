@@ -8,46 +8,46 @@
       a:link {
         text-decoration: none;
       }
+
       a:hover {
-        background-color: blue;
+        background-color: rgb(66, 66, 83);
       }
       .horibar {
-        display: flex;
-        justify-content: space-between;
-        background-color: aqua;
-        padding: 20px;
+        display: grid;
+        justify-content: space-around;
+        background-color: rgb(49, 58, 58);
+        padding: 30px;
         font-size: 14px;
+        width: 60px;
         text-transform: uppercase;
-        margin: 0px;
       }
       .dropdown {
         display: none;
         position: absolute;
-        top: 10vw;
-        left: 80vw;
-        background-color: brown;
+        top: 42vw;
+        left: 16vw;
+        background-color: rgb(116, 102, 102);
         padding: 40px;
       }
       .talk:hover ~ .dropdown {
         display: block;
-      }
-      body {
-        margin: 0%;
-        padding: 0%;
-        background-color: burlywood;
       }
     </style>
   </head>
   <body>
     <ul style="list-style: none" class="horibar">
       <li><a href="">Contacts</a></li>
+      <br />
       <li><a href="">services</a></li>
+      <br />
       <li><a href="">call</a></li>
+      <br />
       <li><a href="">logs</a></li>
+      <br />
       <li class="talk"><a href="">faq</a></li>
 
       <div class="dropdown">
-        <li class="ho">chat</li>
+        <li>chat</li>
         <br />
         <li>ask</li>
         <br />

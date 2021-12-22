@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>newT</title>
+    <style>
+      a[target="_blank"] {
+        font-size: 20px;
+        text-decoration: none;
+        color: chocolate;
+      }
+      input {
+        display: block;
+        margin: 20px;
+        padding: 10px;
+      }
+      input[type="text"] {
+        background-color: rgb(82, 85, 90);
+      }
+      input[title~="bld"] {
+        background-color: darkgreen;
+      }
+      div[class^="box"] {
+        background-color: darkmagenta;
+      }
+      [class*="box"] {
+        background-color: darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" target="_blank">link to open</a>
+    <br /><br />
+    <input type="text" name="first-name" value="first name" id="" />
+    <input type="text" name="first-name" value="first name" id="" />
+    <input type="number" placeholder="number" value="number" id="" />
+    <br />
+    <br />
+
+    <input type="text" title="bld one" /><input type="text" title="bld two" />
+    <hr />
+    <hr />
+    <div class="box-one">this box1</div>
+    <div class="second-box">this box1</div>
+    <div class="third-box">this box1</div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7</title>
+    <style>
+      .first {
+        color: crimson;
+        background-color: blueviolet;
+        padding: 20px;
+        width: calc(100% - 50px);
+        border: 2px solid currentColor;
+        background-image: linear-gradient(to bottom right, green, orange, pink);
+      }
+      .second {
+        color: darkblue;
+        width: calc(100% - 200px);
+        padding-left: 80px;
+        border: 3px solid wheat;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        background-image: radial-gradient(
+          closest-side at 50% 50%,
+          red,
+          brown,
+          yellow
+        );
+      }
+      .third {
+        width: calc(100% - 90px);
+        border: chocolate solid 3px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-image: conic-gradient(white, blue, green);
+      }
+      .third p {
+        word-wrap: break-word;
+      }
+      :root {
+        background-image: linear-gradient(to bottom right, red, green, orange);
+      }
+      .spaan {
+        border: inherit;
+        writing-mode: vertical-lr;
+        position: absolute;
+        top: 300px;
+        font-family: myfont;
+      }
+      @font-face {
+        font-family: myfont;
+        src: url(./font);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      <span class="spaan">hi how are you</span> odio officiis. Voluptates
+      incidunt in, aperiam fugit, illo ipsam, ad sint cum blanditiis soluta
+      perspiciatis.
+    </div>
+    <div class="second">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam facere
+      fugiat eveniet sed animi mollitia odio officiis. Voluptates incidunt in,
+      aperiam fugit, illo ipsam, ad sint cum blanditiis soluta perspiciatis.
+    </div>
+    <div class="third">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
+        facereldllscslslcsdlmldsmclsdmlsmlsmclscmslcmlscmlscmlscmlsdcmslcmslcm
+        fugiat eveniet sed animi mollitia odio officiis. Voluptates incidunt in,
+        aperiam fugit, illo ipsam, ad sint cum blanditiis soluta perspiciatis.
+      </p>
+    </div>
+  </body>
+</html>

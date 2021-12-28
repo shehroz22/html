@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation-2</title>
+  </head>
+  <style>
+    .first {
+      background-color: indigo;
+      width: 70px;
+      height: 70px;
+      animation: box;
+      animation-duration: 3s;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in-out;
+    }
+    @keyframes box {
+      from {
+        background-color: lawngreen;
+        width: 70px;
+        height: 70px;
+      }
+      to {
+        background-color: lightpink;
+        width: 180px;
+        height: 140px;
+        transform: rotateZ(50deg);
+      }
+      0% {
+        background-color: lightseagreen;
+        width: 180px;
+        height: 160px;
+      }
+      20% {
+        background-color: lightslategrey;
+        width: 400px;
+      }
+    }
+    img {
+      width: 170px;
+      height: 170px;
+      padding-top: 200px;
+
+      -webkit-box-reflect: below;
+      object-position: 10%, 80%;
+      -webkit-box-reflect: right;
+      object-fit: cover;
+    }
+  </style>
+  <body>
+    <div class="first">i have 2 ears</div>
+
+    <div class="page">
+      <a href="">&laquo</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">&raquo</a>
+    </div>
+    <img src="././mee.jpg" alt="" />
+  </body>
+</html>

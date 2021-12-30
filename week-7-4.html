@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>advanced-css</title>
+  </head>
+  <style>
+    :root {
+      background-color: blueviolet;
+      --default-padding: 15px;
+      --main-color: white;
+      --second-color: brown;
+    }
+    .first {
+      background-color: lightblue;
+      color: black;
+      margin: 20px;
+      padding: 20px;
+      width: 100%;
+      border: 4px solid var(--second-color);
+    }
+    .second {
+      background-color: lightcoral;
+      margin: 20px;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .third {
+      border: 2px solid var(--main-color);
+      padding: var(--default-padding);
+      color: var(--second-color);
+      box-sizing: border-box;
+      margin: 20px;
+      background-color: yellow;
+      column-count: 4;
+      column-gap: 12px;
+      column-rule-style: ridge;
+      column-rule-color: white;
+      column-rule-width: 4px;
+    }
+    .fifth {
+      background-color: yellowgreen;
+      color: green;
+      border: 4px solid grey;
+
+      width: 300px;
+      resize: vertical;
+      overflow: auto;
+      outline: 3px solid black;
+      outline-offset: 4px;
+    }
+  </style>
+  <body>
+    <div class="first">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum consectetur
+      dignissimos velit temporibus enim repudiandae corporis nobis ut asperiores
+      deserunt! Ullam hic fugit iure voluptas! Sit dolore itaque magni quisquam?
+    </div>
+    <div class="second">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+      nesciunt quae adipisci, voluptates architecto repudiandae possimus
+      consequuntur nulla officiis ullam praesentium nam nemo. Quia ut neque
+      suscipit, maiores itaque optio.
+    </div>
+    <div class="third">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cumque et
+      recusandae non repellendus esse blanditiis at, atque autem officiis,
+      tenetur iure sit quibusdam! Maiores soluta enim quidem quae inventore?
+    </div>
+    <div class="fifth">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maiores
+      rerum, voluptas atque quidem totam expedita perspiciatis dolorum, eos
+      laborum qui et a culpa quos fugit at possimus, ipsum soluta!
+    </div>
+  </body>
+</html>

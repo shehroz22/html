@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-2</title>
+    <style>
+      .one {
+        background-color: chocolate;
+
+        padding: 20px;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+      }
+      .flex > div:nth-child(1) {
+        flex: 10%;
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="one">one</div>
+      <div class="one">one</div>
+      <div class="one">one</div>
+      <div class="one">one</div>
+    </div>
+  </body>
+</html>

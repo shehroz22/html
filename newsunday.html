@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .heading {
+      background-color: blue;
+      padding: 20px;
+      text-align: center;
+    }
+    .bar {
+      background-color: blue;
+      padding: 20px;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .aside {
+      background-color: brown;
+      text-align: center;
+      width: 230px;
+      float: right;
+      height: 220px;
+      margin-top: 2px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .heading {
+        order: 1;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .bar {
+        order: 2;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .aside {
+        order: 3;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .section-1 {
+        order: 4;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .section-2 {
+        order: 5;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .footer {
+        order: 6;
+      }
+    }
+
+    .section-1 {
+      background-color: cadetblue;
+      width: 200px;
+      height: 110px;
+      margin-top: 2px;
+      width: 100%;
+      text-align: center;
+    }
+    .section-2 {
+      background-color: cadetblue;
+      width: 200px;
+      height: 110px;
+      margin-top: 2px;
+      width: 100%;
+      text-align: center;
+    }
+    .footer {
+      background-color: coral;
+      height: 0px;
+      text-align: center;
+      margin-top: 2px;
+      padding: 30px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="heading">h1</div>
+      <div class="bar">nav</div>
+      <div class="aside">aside</div>
+      <div class="section-1">section</div>
+      <div class="section-2">section</div>
+      <div class="footer">footer</div>
+    </div>
+    >
+  </body>
+</html>

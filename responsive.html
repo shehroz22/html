@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>responsive flexbox</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        height: 100vh;
+      }
+      .container {
+        margin: 20px;
+      }
+      .row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .first {
+        background-color: darkblue;
+        position: relative;
+        max-width: 300px;
+        flex: 1;
+        height: 150px;
+        margin: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+
+      .first-2 {
+        background-color: rgb(83, 83, 112);
+        position: relative;
+        max-width: 460px;
+        flex: 1;
+        height: 200px;
+        margin: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+
+      .first-3 {
+        background-color: rgb(91, 91, 163);
+        position: relative;
+        max-width: 460px;
+        flex: 1;
+        height: 200px;
+        margin: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+      @media (max-width: 800px) {
+        .first {
+          flex: 100%;
+          max-width: 600px;
+        }
+        .first-2 {
+          flex: 100%;
+          max-width: 600px;
+        }
+        .first-3 {
+          flex: 100%;
+          max-width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="first"></div>
+        <div class="first"></div>
+        <div class="first"></div>
+      </div>
+
+      <div class="row">
+        <div class="first-2"></div>
+        <div class="first-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="first-3"></div>
+        >
+      </div>
+    </div>
+  </body>
+</html>

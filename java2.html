@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="work">to my friend</p>
+    <br />
+    <button onclick="window.alert('gift');">click</button>
+
+    <h1 id="cool">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In doloremque
+      sed, magnam pariatur
+
+      <button type="button" onclick="myFunction()">the big game</button>
+    </h1>
+
+    <script>
+      document.getElementById("work").innerText = "Hi how are you my friend";
+      document.getElementById("work").innerHTML = "<b>hi how are you</b>";
+      var gift = "city of life";
+      document.write(gift);
+
+      window.alert(gift);
+
+      var x, y, z;
+      x = 2;
+      y = 4;
+      z = 3;
+      console.log(x, y, z);
+
+      let h = "2" + 3 + 3;
+      console.log(h);
+
+      let v = 3 + 3 + "2";
+      console.log(v);
+
+      function myFunction() {
+        document.getElementById("cool").innerHTML = "here we go.";
+      }
+    </script>
+  </body>
+</html>

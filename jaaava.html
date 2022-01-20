@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hi my friend</h1>
+    <p>what is the total cost.</p>
+    <p id="gop"></p>
+    <button onclick="window.print()">click to print</button>
+    <p id="desi"></p>
+    <script>
+      document.write(5 + 6);
+
+      let x, y;
+      x = 2 + 4;
+      y = x * 6;
+      document.write(x, y);
+
+      const cost1 = 4;
+      const cost2 = 4;
+      let total = cost1 + cost2;
+      document.getElementById("gop").innerHTML = "the overall cost" + total;
+
+      const colors = ["green", "white", "blue"];
+
+      colors[0] = "red";
+      colors.push("pink");
+
+      document.getElementById("desi").innerHTML = colors;
+    </script>
+  </body>
+</html>

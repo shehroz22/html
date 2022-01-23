@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="good"></p>
+    <p id="twi"></p>
+    <p id="tri"></p>
+    <p id="$fri"></p>
+    <p id="op"></p>
+    <p id="opt"></p>
+    <p id="opq"></p>
+    <p id="opl"></p>
+    <p id="jk"></p>
+    <script>
+      //addition and multiplication
+      let a = 3;
+      let x = (10 + 20) * a;
+      document.getElementById("good").innerHTML = x;
+      //additon
+      let s = 2,
+        t = 3;
+      let z = s + t;
+      document.write(z);
+
+      //increasing increment post//
+      let sliceOfPizza = 10;
+      sliceOfPizza++;
+      document.write(sliceOfPizza);
+      let sliceOfApple = 10;
+      //decreament post//
+      sliceOfApple--;
+      document.write(sliceOfApple);
+
+      //pre inrement post increment diff//
+      let cake = 20;
+      let newCake = cake++;
+      document.write(newCake);
+      document.write(cake);
+
+      //exponential//
+      let f = 5;
+      document.getElementById("twi").innerHTML = f ** 2;
+
+      //PARENTHESIS PRESEDENECE//
+      document.getElementById("tri").innerHTML = (2 + 2) * 4;
+
+      //ASSSIGNMENT OPERATORS//
+      let rise = 4;
+      rise *= 5;
+      document.getElementById("$fri").innerHTML = rise;
+      //comparison operator//
+      bike = "10";
+      if (bike == "10") {
+        document.getElementById("op").innerHTML = "its working!";
+        //!= if not equal//
+      }
+      //greater  than or equal//
+      car = "10";
+      if (car >= "10") {
+        document.getElementById("opt").innerHTML = "its car!";
+      }
+      //&&operators for or we use || //
+      var myAge = 23;
+      if (myAge >= 18 && myAge <= 23) {
+        document.write("you are allowed");
+      } else {
+        document.write("you can drive");
+      }
+      //types of operator//
+      //typeof//
+      let hamza = "40";
+      document.write(typeof hamza);
+
+      //instance of
+      var foo = new String(22);
+      document.write(foo instanceof String);
+
+      //boolean
+
+      let $x = 5;
+      let $y = 5;
+      let $z = 6;
+      document.getElementById("opq").innerHTML =
+        ($x == $y) + "<br>" + ($x == $z);
+
+      //array jvscript//
+      const color = ["red", "blue", "white"];
+      document.getElementById("opl").innerHTML = color[0];
+
+      const person = {
+        firstName: "abdul",
+        lastName: "rehman",
+        age: "22",
+      };
+      //javascript object
+      document.getElementById("jk").innerHTML =
+        person.firstName + "is" + person.age + person.lastName;
+    </script>
+  </body>
+</html>

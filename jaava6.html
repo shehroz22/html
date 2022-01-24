@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monday-part2-function</title>
+  </head>
+  <body>
+    <h1 id="plus">addition</h1>
+    <h1 id="mult">multiplication</h1>
+    <input type="number" id="a" onchange="dothis()" /> <br />
+    <br />
+    <input type="number" id="b" onchange="dothis()" />
+    <script>
+      var a,
+        b = 0;
+      function dothis() {
+        a = document.getElementById("a").value;
+        b = document.getElementById("b").value;
+        sum(a, b);
+        mult(a, b);
+        function sum(a, b) {
+          var sum = parseInt(a) + parseInt(b);
+          document.getElementById("plus").innerHTML = sum;
+        }
+        function mult(a, b) {
+          var mult = parseInt(a) * parseInt(b);
+          document.getElementById("mult").innerHTML = mult;
+        }
+      }
+    </script>
+  </body>
+</html>

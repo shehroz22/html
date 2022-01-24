@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="this.innerHTML = Date ()">date</button> <br />
+    <input id="a" type="number" /><br />
+    <input id="b" type="number" /> <br />
+    <h1 id="cal">00</h1>
+    <button onclick="plus()">plus</button> <br />
+    <br />
+
+    <script>
+      function plus() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var sum = parseInt(a) + parseInt(b);
+        document.getElementById("cal").innerHTML = sum;
+      }
+
+      const shoes = {
+        brand: "nike",
+        size: "9",
+        color: "blue",
+        type: "leather",
+      };
+      var tip = "is " + shoes.brand + " company " + shoes.type;
+      document.write(tip, "<br>");
+      var count = ["4", "5", "6", "7"];
+      document.write(count[1], "<br>");
+
+      var cricket = [
+        { team: "pakistan", player: "11", col: "green" },
+
+        { team: "india", player: "13", col: "orange" },
+      ];
+      document.write(cricket.length);
+      document.write(cricket[0].team);
+    </script>
+  </body>
+</html>

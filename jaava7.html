@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="this.innerHTML=Date()">click me</button>
+    <button oncload="this.innerHTML=Date()">click me</button>
+    <button onmouseover="this.innerHTML=Date()">click me</button>
+    <button onmousewheel="this.innerHTML=Date()">click me</button>
+    <button onmouseout="this.innerHTML=Date()">click me</button>
+    <button on="this.innerHTML=Date()">click me</button>
+    <script>
+      let text = "ABCDETGHAKJDHJSK";
+      document.write(text.length);
+      let sad = "tom is 'a' brown \\guy\\ who lives in \"brroklyn\"";
+      document.write(sad);
+      //string
+      let x = "hamza";
+      //string as object
+      let y = new String("hamza");
+      document.write(typeof y);
+
+      //slice
+      let str = "red,blue,green";
+      document.write(str.slice(3, 8));
+      let his = (document = "apple,mango,grapes");
+      document.write(his.slice(-6, -1));
+      let her = (document = "apple,mango,grapes");
+      document.write(her.substr(6, 5));
+      let guy = "he is a good guy";
+      document.write(guy.replace("guy", "boy"));
+      let drink = "pepsi";
+      let food = "rice";
+      document.write(drink.concat("food"));
+      let see = "lemon";
+      document.write(see.toUpperCase());
+      //padstart not working
+      let rich = "good game";
+      document.write(rich.padStart(7, 4));
+      let ubl = "lobnmma";
+      document.write(ubl.charAt(6));
+      //same for charCodeAT
+
+      // property acceess
+      let mn = "bigboss";
+      document.write(mn[2]);
+    </script>
+  </body>
+</html>

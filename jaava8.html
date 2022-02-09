@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="twp">Lorem ipsum dolor sit amet consectetur.</p>
+
+    <button onclick="func()">click</button>
+    <script>
+      //length
+      let abed = "abcdefghijk";
+      document.write(abed.length, "</br>", "</br>");
+      ("</br>");
+      //escape character
+      let text = 'we are called from "sky"';
+      document.write(text);
+
+      //string as object
+      let x = "abid";
+      let y = new String("yasir");
+      document.write(typeof x, "</br>");
+      document.write(typeof y);
+      //replacing text in string
+      function func() {
+        let text = document.getElementById("twp").innerText;
+        document.getElementById("twp").innerHTML = text.replace(
+          "amet",
+          "kya horha h"
+        );
+      }
+      //last index search endswith
+      let f = "we are school going school";
+      document.write(f.search("school"));
+      document.write(f.lastIndexOf("school"));
+      document.write(f.endsWith("school"));
+      //startwith
+      let c = "i am boy";
+      document.write(c.startsWith("am"), "</br>", "</br>");
+      //icludes
+      document.write(c.includes("am", "3"), "</br>");
+      //inserting variable using template literal  (``)
+      let v = "we will";
+      let n = "enjoy";
+      document.write(`however ${v},${n}`);
+      let r = "10";
+      let z = 20;
+      document.write(parseInt(r) + 20);
+      //Nan not a number
+      let yellow = 2;
+      let green = "google";
+      document.write(yellow / green);
+      //is Nan
+      document.write(isNaN(green));
+      let desd = "36";
+      document.write(desd.toString(2), "</br>");
+      //switch
+
+      const age = 20;
+      switch (age) {
+        case 20:
+          document.write("you are allowed");
+          break;
+        case 40:
+          document.write("you are not allowed");
+          break;
+        default:
+          document.write("what");
+          break;
+      }
+      //if else elseif
+      const guy = 50;
+      const ages = 30;
+      if (ages == 18) {
+        document.write("allowed to drive");
+      } else if (ages == 20) {
+        document.write("are you 20");
+      } else if (guy == 50 && ages == 40) {
+        document.write("cool");
+      } else {
+        document.write("not allowed");
+      }
+      ///loops repeat itself unless its false
+      //for while dowhile//
+      //   for (let i = 0; i < 10; i += 1) {
+      //     document.write(i);
+      //
+      //   let mn = 0;
+      //   while (mn < 10) {
+      //     document.write(mn);
+      //     mn += 1;
+      //   }
+
+      //diffrence between while and do while is that do while will first perform do then check if its true or false but in only while if the statement is false it wil not execute
+      //   let rs = 120;
+      //   do {
+      //     document.write(rs + 1);
+      //     rs += 1;
+      //   } while (rs < 10);
+
+      //break will finish the loop at break and will not recontinue and it will take you to end result after break.
+      let ty = 0;
+      do {
+        document.write(ty + 1);
+        if (ty === 5) {
+          break;
+        }
+        ty += 1;
+      } while (ty < 10);
+      document.write("finish", "</br>");
+
+      // for each
+      let arrr = [2, 4, 5, 6, 7, 8];
+      arrr.forEach(function (element) {
+        document.write(arrr);
+      });
+
+      function greet(name, age) {
+        document.write(`Hello ${name} I am ${age} years old`);
+      }
+      greet("john", "25");
+
+      //DOM is document object module its basically a tree structurre of a page and its formed when we open the page we understand dom structure by looking it in console the reason why we give importance to it is that it is used in jvascript methods to manupulate the document and can make things in it dynamics//
+
+      console.log("DOM STUDY");
+      let jaa = window.document;
+      //alert("hi ");
+      //a = prompt("are you sure");
+      // a = confirm("are you sure");
+      jaa = innerWidth;
+      console.log("jaa");
+
+      // window.location
+    </script>
+  </body>
+</html>

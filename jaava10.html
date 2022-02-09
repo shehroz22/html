@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <p id="arr"></p>
+    <h1 id="mp"></h1>
+    <p id="nop"></p>
+
+    <script>
+      //New Array
+      const arr_b = new Array(" apple", "mangoe", "</br>");
+      document.write(arr_b);
+
+      // CHANGING IN ARRRAy
+      const cup = [1, 2, 3, 4, 5];
+      cup[0] = "apple";
+      document.write(cup);
+
+      //lastpofarray
+      const color = ["red", "orange", "blue", "</br>"];
+      // document.write(color.length-1)
+      document.write(color[color.length - 1]);
+
+      //adding new element in array
+      const ali = ["rice", "browni", "sugar"];
+      // ali.push("salt")
+      if (ali.includes("ric")) {
+        document.write("yes");
+      } else {
+        ali.push("salt");
+        document.write(ali);
+      }
+
+      //Array.isArray
+
+      const fan = ["4", "2"];
+
+      document.write(Array.isArray(fan));
+
+      //instance of array
+      // document.write(fan instanceof Array)
+
+      //toString()
+      let ye = 3;
+      se = true;
+      document.getElementById("arr").innerHTML = ye.toString();
+      //to precise
+      // document.getElementById("arr").innerHTML=
+      // ye.toPrecision(2)
+
+      document.getElementById("arr").innerHTML = ye.toString();
+
+      // number method
+      document.getElementById("arr").innerHTML = Number(se);
+
+      // map
+      const go = [4, 9, 16, 25];
+
+      document.getElementById("mp").innerHTML = go.map(Math.sqrt);
+      //whenevr we weanna change in array and want result to be saved as new array we use map
+      var nme = [
+        { firstName: "ali", lastName: "rizwan" },
+
+        { firstName: "abdu", lastName: "rhmnn" },
+      ];
+      var nm_b = nme.map(sum);
+      function sum(x) {
+        return x.firstName;
+      }
+      document.write(nm_b);
+      ////filter
+      const tip = [3, 4, 5, 6, 7, 8, 9, 10];
+      const tip_b = tip.filter(CheckValue);
+      function CheckValue(value) {
+        return value > 5;
+      }
+      document.write(tip_b);
+
+      //   const rdc_b = tip.reduce(rup);
+      //   function rup(current_value, next_values, index, array) {
+      //     document.write(`${current_value} ${next_values} ${index}`);
+      //   }
+      //   document.write(rdc_b);
+      // index of
+      const apple = [3, 4, 5, 6, 7];
+      document.write(apple.indexOf(7));
+
+      const jip = ["Bise", "Oang", "ple", "Mano"];
+
+      const sick = jip.keys();
+
+      for (i = 0; i < jip.length; i += 1) {
+        document.write(jip[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

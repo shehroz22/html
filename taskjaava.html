@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{background-color: cadetblue;}
+    div{
+       text-align:center ;
+       border-radius: 70px;
+   
+background-color: brown;}
+    input{
+      margin: 460px;
+        
+    }
+  </style>
+
+  <body>
+    <div id="kips" > </div>
+    <p id="imd"></p>
+  </br>
+    <input type="text" onchange="disp(this.value)">
+    <script>
+        
+      const carss = [
+        {
+          company: "BMW",
+          color: "white",
+          model: 2020,
+         
+        },
+        {
+          company: "Audi",
+          color: "black",
+          model: 2021,
+        },
+        {
+          company: "suzuki",
+          color: "orange",
+          model: 2011,
+
+        },
+        {
+          company: "honda",
+          color: "red",
+          model: 2010,
+
+        },
+        {
+          company: "toyota",
+          color: "golden",
+          model: 2009,
+
+        },
+        {
+          company: "minicooper",
+          color: "pink",
+          model: 2017,
+          
+
+        },
+
+
+       
+      ];
+
+    
+      function disp(input_crs) {
+          for (let i = 0; i < carss.length; i++) {
+            checkData(carss[i], input_crs);
+          }
+        }
+
+      function checkData(carss, input_crs) {
+        if (carss.company.toLowerCase() ===input_crs.toLowerCase()) {
+        
+
+          let display = `
+                       <h4>${carss.company}</h4>
+                        <p>${carss.color}</p>
+                        <p>${carss.model}</p>
+                       
+                    `;
+                    
+          document.getElementById("kips").innerHTML = display;
+          return
+        
+          }
+          else{
+              let you=` not found`
+              document.getElementById("imd").innerHTML=you
+          }
+     
+      }
+
+    
+      
+    </script>
+  </body>
+</html>

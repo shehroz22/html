@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="hippo" class="chil">hi my friend how are you</p>
+    <div class="parent">
+      <p class="child">child1</p>
+      <p class="child">child2</p>
+      <p class="qup">qury</p>
+      <p class="qup">qury</p>
+    </div>
+
+    <script>
+      //element selector in javsript
+      //single elemnet selector
+      let elem = document.getElementById("hippo");
+      //   elem = elem.className;
+      //   elem = elem.childNodes;
+      //   console.log(elem);
+      elem.style.color = "blue";
+      elem.innerText = "oh my fellow";
+
+      //query selector
+      let slm = document.querySelector("p.qup");
+      //   querySelectorAll("p.qup");
+      slm.style.color = "yellow";
+      console.log(slm);
+
+      //multiselctor
+      //   let musk = document.getElementsByClassName("child");
+      let musk = document.getElementsByTagName("div");
+      console.log(musk);
+      //   console.log(musk[0]);
+
+      //to alternate all the childs in div we can use for Eacch but for each wont work on html collection so we use array.from forEach in order to make array from html and then perform the funtion
+
+      Array.from(musk).forEach((kla) => {
+        console.log(kla);
+        kla.style.color = "orange";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>save data and seacrh</title>
+  </head>
+  <body>
+    <label for="">Brand Name &nbsp;</label><input type="text" id="shoe" />
+    <br />
+    <br />
+    <label for=""> Foot Size &nbsp; &nbsp; &nbsp; </label>
+    <input type="text" id="size" /> <br /><br />
+    <label for=""> Shoe Type &nbsp; &nbsp;</label>
+    <input type="text" id="type" />
+    <br />
+    <br />
+    &nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="dothis()">Submit Information</button>
+    <div>
+      <ol id="show-data"></ol>
+    </div>
+    <label for="">
+      Search
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+    ><input
+      type="search
+    "
+      onkeyup="perform(this.value)"
+    />
+    <script>
+      var datas = [
+        {
+          Company: "Bata",
+          Sizes: "13",
+          Types: "Sneaker",
+        },
+
+        {
+          Company: "Service",
+          Sizes: "16",
+          Types: "Classic",
+        },
+
+        {
+          Company: "HushPuppies",
+          Sizes: "17",
+          Types: "Exercise",
+        },
+      ];
+
+      function dothis() {
+        var given_name = document.getElementById("shoe").value;
+
+        var given_size = document.getElementById("size").value;
+
+        var given_ncompany = document.getElementById("type").value;
+
+        const ideal = {
+          Company: given_name,
+          Sizes: given_size,
+          Types: given_ncompany,
+        };
+
+        datas.push(ideal);
+        showsdata();
+      }
+      function showsdata() {
+        document.getElementById("show-data").innerHTML = "";
+
+        for (let item of datas.values()) {
+          const shoe = item;
+          const here = `
+            <li>
+
+        <h2>${shoe.Company}</h2>
+        <h2>${shoe.Sizes}</h2>
+        <h2>${shoe.Types}</h2>
+
+                </li>`;
+          document.getElementById("show-data").innerHTML += here;
+        }
+      }
+      showsData();
+
+      //   function perform(value) {
+      //     if (value !== "") {
+      //       const here = `
+      //         <li>
+
+      //     <h2>${shoe.Company}</h2>
+      //     <h2>${shoe.Sizes}</h2>
+      //     <h2>${shoe.Types}</h2>
+
+      //             </li>`;
+      //       document.getElementById("show-data").innerHTML = here;
+      //     }
+      //   }
+
+      function perform(value) {
+        for (let item of datas.values()) {
+          if (item.Company.toLowerCase().includes(value.toLowerCase())) {
+            const here = `
+            <sli>
+
+        <h2>${item.Company}</h2>
+        <h2>${item.Sizes}</h2>
+        <h2>${item.Types}</h2>
+
+                </li>`;
+            document.getElementById("show-data").innerHTML = here;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

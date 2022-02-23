@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hi = "hi how are you";
+      if (hi.endsWith("you")) {
+        document.write("yes");
+      }
+
+      //   var name = `shehroz`;
+      //   name=16
+      //   document.write(name);
+
+      let a = 12;
+      a = 13;
+      a = 15;
+      a = 16;
+      document.write(a);
+      //primitive data types
+      //string
+      let string = "hi";
+      document.write(typeof string);
+      //number
+      let num = 14;
+      document.write(typeof num);
+
+      //boolean
+      let boolean = true;
+      document.write(typeof boolean);
+
+      //reference data types
+
+      let arr = [1, 2, 3, 4];
+      document.write(typeof arr);
+
+      let date = new Date();
+      document.write(typeof date);
+
+      ///object literal
+      let ob = {
+        kohli: 20,
+        age: 50,
+      };
+      document.write(typeof ob);
+
+      ///2 type conversion
+
+      //string
+      let nuum = 45;
+      nuum = nuum.toString();
+      document.write(nuum, typeof nuum);
+
+      //parseint
+      let ary = parseInt("oh my friend");
+
+      document.write(ary, typeof ary);
+
+      //parsefloat
+      let fih = "34";
+      fih = parseFloat();
+      document.write(typeof fih);
+
+      //tofixed
+
+      let $hi = 345.54;
+      document.write($hi.toFixed("2"));
+
+      //string properties
+      //endswith
+      let hip = "hi how are you";
+      if (hip.endsWith("you")) {
+        document.write("yes");
+      }
+
+      let rii = "orrange is my fav fruit";
+      //   riim = rii.indexOf("f");
+
+      //   riim=rii.includes("my")
+      // riim=rii.replace("my","to")
+      // riim=rii.lastIndexOf("r")
+      //   riim = rii.slice(0,6);
+      riim = rii.split("my");
+
+      document.write(riim);
+
+      //   //template literal
+      let aage = 14;
+      let cio = `<h1> HI how are you  ${aage}to my fiend</h1>`;
+      document.write(cio);
+      //concat
+
+      let hio = "how are you";
+      hiss = hio.concat("fine");
+      document.write(hiss);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      //function
+
+      function cool() {
+        document.write("hicool");
+      }
+      cool();
+
+      //once u make function u have to recall it after closing brackets make sure that the variable is not passed in function as it will not be called outside bracket but we can store variable outside bracket and then call it inside function
+
+      //parameters
+      const ali = "good";
+      function dothis(text) {
+        const alip = text.toUpperCase();
+        document.write(alip);
+      }
+      dothis(ali);
+
+      //object
+
+      let shoes = {
+        brand: "nike",
+        size: "5",
+        quality: "good",
+      };
+      document.write(shoes.brand);
+      document.write(shoes["size"]);
+
+      //aray
+
+      let rim = [1, 2, 3, 4, 5];
+      let rum = ["1", "3", [3, 3]];
+      document.write(rum[2]);
+
+      let z = new Array(1, 3);
+      document.write(Array.isArray(z));
+
+      let marks = [2, 3, 4, 5, 6, 7];
+
+      //   marks.reverse();
+      marks.splice(0, 2);
+      //   document.write(marks.indexOf(2));
+      //   let m = marks.push(7);
+      document.write(marks);
+
+      let fun = [3, 4, 5, 6, 7, 8, 9];
+
+      function dosthiss() {
+        let vis = fun.splice(3, 3);
+        document.write(vis);
+      }
+      dosthiss();
+      //for parameter
+      let funt = [1, 2, 5, 6, 7, 8, 9];
+
+      function hiss(typ) {
+        let vis = typ.splice(0, 3);
+        document.write(vis);
+      }
+      hiss(funt);
+    </script>
+  </body>
+</html>

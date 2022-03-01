@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6, 7];
+
+      document.write(arr[1]);
+      const seh = ["tom", "cat", "blue"];
+      // for (i = 0; i < seh.length; i++) {
+      //   document.write(seh[i]);
+      // }
+
+      const srt = ["ali", "hamza", "bqs"];
+      set = srt.sort();
+      document.write(set);
+
+      //forEach
+      // const abd = [1, 3, 4, 5, 6, 7];
+      // abd.forEach(function (value) {
+      //   document.write(value);
+      // });
+
+      // abd.push(8,9)
+      // document.write(abd)
+
+      const alk = {
+        name: "bism",
+        class: "4",
+        grade: "f",
+      };
+      for (let key in alk) {
+        document.write();
+      }
+
+      //break
+      // for (i = 0; i < 10; i++) {
+      //   document.write(`${i}loop `);
+      //   if (i == 6) break;
+      // }
+
+      //for of
+      const rt = [1, 2, 3, 4, 5];
+      for (r of rt) {
+        document.write(r);
+      }
+
+      const nbb = {
+        name: "ali",
+        class: "5",
+        grade: "a",
+      };
+      for (let key in nbb) {
+        document.write(nbb[key]);
+      }
+
+      //looping through object
+      const cars = [
+        {
+          name: "honda",
+          company: 2002,
+          brand: "japan",
+        },
+        {
+          name: "totota",
+          company: 2010,
+          brand: "china",
+        },
+        {
+          name: "bmw",
+          company: 2011,
+          brand: "amerrica",
+        },
+      ];
+      // console.log(cars[1]);
+      // document.write(cars[3]);
+      for (i = 0; i < cars.length; i++) {
+        document.write(cars[i].brand);
+      }
+
+      // cars.forEach(function (element) {
+      //   console.log(element.brand);
+      // });
+
+      let bikes = ["hi", "bii", "sii"];
+      bikes.push("new");
+      document.write(bikes);
+
+      let sik = [1, 2, 3, 4, 5];
+      sik.splice(1, 2, "bmw");
+
+      document.write(sik);
+
+      let giy = ["jord", "khan", "kapn", "knas"];
+      let hiu = giy.slice(0, 2);
+      document.write(hiu);
+
+      const weather = [
+        {
+          type: "summer",
+          temp: 50,
+        },
+        {
+          type: "automn",
+          temp: 40,
+        },
+
+        {
+          type: "spring",
+          temp: 30,
+        },
+      ];
+
+      // weather.forEach(function (element) {
+      //   // document.write(element.type);
+
+      //   document.write(element.type);
+      // });
+
+      for (i = 0; i < weather.length; i++) {
+        document.write(weather[i].temp);
+      }
+    </script>
+  </body>
+</html>

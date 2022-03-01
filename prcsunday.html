@@ -122,8 +122,12 @@
       //   document.write(element.type);
       // });
 
-      for (i = 0; i < weather.length; i++) {
-        document.write(weather[i].temp);
+      // for (i = 0; i < weather.length; i++) {
+      //   document.write(weather[i].temp);
+      // }
+
+      for (let key in weather) {
+        document.write(weather[key].type);
       }
     </script>
   </body>

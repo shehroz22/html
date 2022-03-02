@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // map execute funtion on array and return new array
+      const hgt = ["head", "foot", "hand", "lips"];
+
+      const hff = hgt.map(function (values, index, array) {
+        return values + "!";
+      });
+      document.write(hff);
+      //So i created an array and use filter funtion to execute the funtion and filter but instead of simply using if i used for loop since i dont wanna use for each loop and dont want use if statement  just wanna use for loop to go through the array and bring values less tha 7 so the question is
+      //1// can i use loop in filter method funtion?
+
+      //2//i can filter it using loop why i use filter than
+      //3// are these two different techniques ?
+      const nm = [5, 6, 7, 8, 9];
+      const ty = nm.filter(function (values, index, array) {
+        //    if(values < 7){
+        //        return values
+        //    }
+
+        for (let i = 0; i < nm.length; i++) {
+          if (values < 7) return values;
+        }
+      });
+      document.write(ty);
+
+      const gn = [1, 2, 3, 4, 5, 6];
+      const tgb = gn.find(function (values) {
+        return values > 4;
+      });
+      document.write(tgb);
+
+      const fg = [9, 8, 7, 6, 5];
+      const rnc = fg.includes(4);
+      document.write(rnc);
+
+      const harm = ["dge", "de", "hi"];
+      for (let s of harm) {
+        document.write(s);
+      }
+
+      const fiv = ["hamza", "sameer", "abdul"];
+      let key = fiv.keys();
+      let value = fiv.values();
+      let entry = fiv.entries();
+      for (let i of key) {
+        document.write(i);
+      }
+      for (let i of value) {
+        document.write(i);
+      }
+      for (let i of entries) {
+        document.write(i);
+      }
+      console.log(key);
+      document.write();
+      document.write();
+    </script>
+  </body>
+</html>

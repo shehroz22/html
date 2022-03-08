@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <div id="hello">
+      <p id="hi">hello dom</p>
+    </div>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="ip" onkeyup="shw()" type="text" />
+    <div id="vip">
+      <p class="fhld">1</p>
+      <p class="fhld">2</p>
+      <p class="fhld">3</p>
+    </div>
+    <p id="shw"></p>
+    <script>
+      function shw() {
+        let ris = document.getElementById("ip").value;
+
+        document.getElementById("shw").innerHTML = ris;
+      }
+
+      //object
+      const shoes = {
+        Name: "bata",
+        Size: "12",
+        Gender: "Male",
+        Quality: "New",
+      };
+
+      document.write(`this
+      ${shoes.Name}is${shoes.Quality}`);
+
+      // document.write(shoes.Name);
+
+      //functions
+      function func() {
+        var datas = "hio how are you";
+        document.write(datas);
+      }
+      func();
+
+      function fanta() {
+        var fop = "i am fine";
+        return fop;
+      }
+      document.write(fanta());
+
+      //parameters
+
+      function rizwan(q) {
+        var ip = "my age is" + q;
+        return ip;
+      }
+      document.write(rizwan("28,</br>"));
+
+      //table function
+      //   var biw = 3;
+      //   function fci(biw) {
+      //     for (i = 0; i <= 10; i++) {
+      //       document.write(`${biw} x ${i} = ${2 * i} ,</br>`);
+      //     }
+
+      //     fci(biw);
+      //   }
+      //   document.write(fci(biw));
+      //elementselector
+      //   document.write(biw);
+      //   let ele = document.getElementById("hello").childNodes;
+      //   let ele = document.getElementById("hello").parentNode;
+      let ele = document.getElementById("hi");
+      ele.style.color = "red";
+      // ele.innerText ="hi how are you my friend"
+      ele.innerHTML = "<b>hi how are you <b>";
+      console.log(ele);
+      //   let pri = document.querySelector(".fhld").console.log(pri);
+      let guo = document.querySelector("#vip");
+      console.log(guo);
+
+      let rhf = document.querySelector(".fhld");
+      console.log(rhf);
+      let st = document.getElementsByTagName("<p>");
+      st.style = "orange";
+      console.log(st);
+
+      let objj = [
+        {
+          car: "name",
+        },
+      ];
+      document.write(typeof objj);
+      //   Array.from(objj).forEach(function (element) {
+      //     document.write(element.car);
+      objj.forEach(function (element) {
+        document.write(element.car);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="par">
+      <h1 class="chil">
+        google
+
+        <p>hi this is subchild</p>
+      </h1>
+      <h1 class="chil">yahoo</h1>
+      <input class="inp" type="text" />
+    </div>
+
+    <p class="ext">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ducimus
+      sequi repellat corrupti. Molestias repellat qui, iusto eaque voluptatibus
+      hic ipsam odio ex tempora vitae dicta ullam accusamus iste possimus!
+    </p>
+
+    <script>
+      //query selector
+      let query = document.querySelector(".chil");
+      console.log(query);
+      //childnodes
+
+      let chilb = document.querySelector(".par");
+      console.log(chilb.childNodes);
+      //children
+      let clb = document.querySelector(".par");
+      console.log(clb.children);
+      //nodename
+      let nme = document.querySelector(".par");
+      //   console.log(nme.childNodes[0].nodeName);
+      console.log(nme.nodeType);
+
+      //firstelementchild
+
+      let fg = document.querySelector(".par");
+      console.log(fg.firstElementChild);
+
+      let kfg = document.querySelector(".par");
+      //   console.log(kfg.children[0].children);
+      console.log(kfg.childElementCount);
+
+      //parentNode
+      let fiy = document.querySelector(".par");
+      //   console.log(fiy.firstElementChild.parentNode);
+
+      //nextsibling
+      console.log(fiy.firstChild.nextSibling);
+    </script>
+  </body>
+</html>

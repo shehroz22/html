@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <details id="is" ontoggle="othis()">
+      <summary>below is detail</summary>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem dolorem
+        repellat recusandae voluptates ducimus minima, dolor assumenda dicta
+        impedit a esse, quo voluptatibus optio in exercitationem ipsum fuga
+        quaerat accusamus!
+      </p>
+    </details>
+
+    <p id="mmnu">hi</p>
+    <button oncontextmenu="dothis()">click</button>
+    <button ondblclick="dothis()">click</button>
+    <button ondblclick="dothis()">click</button>
+    <button onmouseenter="dothis()">click</button>
+    <button onmouseleave="dothis()">click</button>
+
+    <script>
+      function dothis() {
+        document.write(new Date());
+      }
+
+      const cpu = {
+        comp: "hp",
+        cor: "i9",
+
+        frret: function good() {
+          document.write(this.comp);
+        },
+      };
+      cpu.frret();
+      //in function this will refer to window object
+      function sim() {
+        let cr = 2 + 2;
+        document.write(cr);
+        document.write(this);
+      }
+      sim();
+      //in function method this refer to owner object
+
+      //toggle
+      function othis() {
+        document.getElementById("is").style.color = "red";
+      }
+    </script>
+  </body>
+</html>

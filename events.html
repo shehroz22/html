@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+  </head>
+
+  <body class="cont">
+    <input id="bm" type="text" />
+    <input id="no" type="button" value="submit" />
+    <h1 id="lis">wecome</h1>
+    <h2 class="thu" id="ths">click me</h2>
+    <p id="entr">data</p>
+    <script>
+      //   document.getElementById("lis").addEventListener("click", function (e) {
+      //     console.log("you have click the ");
+      //     console.log(e);
+      //   });
+      //target
+      //   document.getElementById("ths").addEventListener("click", function (e) {
+      //     console.log("you click 2");
+      //     // console.log(e.target);
+      //     console.log(e.target);
+      //   });
+
+      //   document.getElementById("ths").addEventListener("click", function (e) {
+      //     console.log("hi how ar euou");
+      //     let gif = e.target.className;
+      //     // gif = e.offsetX;
+      //     gif = e.clientX;
+      //     console.log(gif);
+      //   });
+      //   let btn = document.getElementById("no");
+      //   //   btn.addEventListener("click", dothis);
+      //   btn.addEventListener("click", dothis);
+      //   function dothis(e) {
+      //     console.log(`hello${e}`);
+      //   }
+
+      //   document.getElementById("bm").addEventListener("mouseenter", fun1);
+      //   function fun1(e) {
+      //     console.log(e);
+      //   }
+      //do again from mouse enter
+      //   document.querySelector("#entr").addEventListener("click", function () {
+      //     console.log("you entered no");
+      //   });
+
+      document
+        .querySelector(".cont")
+        .addEventListener("mousemove", function (e) {
+          console.log(e.offsetX);
+        });
+    </script>
+  </body>
+</html>

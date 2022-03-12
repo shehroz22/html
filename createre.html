@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create-remove-element</title>
+  </head>
+  <body>
+    <ul id="lio" class="hio">
+      <li class="lis">pink</li>
+      <li id="opo" class="lis">orange</li>
+      <li class="lis">red</li>
+    </ul>
+
+    <script>
+      //creating element
+      let ali = document.createElement("li");
+      ali.className = "lis";
+      ali.id = "new";
+      ali.innerText = "hello my friend";
+
+      ali.setAttribute("title", "text");
+      //   console.log(li);
+
+      //apend child
+      let gimp = document.querySelector(".lis");
+      gimp.appendChild(ali);
+
+      console.log(gimp);
+      console.log(ali);
+      //create text node
+      let elm = document.createElement("p");
+      let rtt = document.createTextNode("MY FRIEND HOW ARE YOU");
+      elm.appendChild(rtt);
+      elm.className = "hook";
+      let gip = document.querySelector(".lis");
+      gip.appendChild(elm);
+
+      console.log(gip);
+      console.log(elm);
+      //replacing element
+      let ryun = document.getElementById("lio");
+
+      ryun.replaceChild(ali, document.getElementById("opo"));
+    </script>
+  </body>
+</html>

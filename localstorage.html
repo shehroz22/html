@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local storage</title>
+  </head>
+  <body>
+    <script>
+      localStorage.setItem("name", "ali");
+      localStorage.setItem("name2", "sam");
+
+      //how to remove particular item
+      localStorage.removeItem("name2");
+      //how to get local storage item
+
+      let name = localStorage.getItem("name2");
+      console.log(name);
+
+      //how to clear local storage
+      //   localStorage.clear();
+
+      //session storage
+      sessionStorage.setItem("name", "haider");
+
+      //how to store array in local storage so we cannot set item using array but we can convert it in string first
+      let arr = ["red", "blue"];
+      localStorage.setItem("clr", arr);
+      localStorage.setItem("clr", JSON.stringify(arr));
+      //now to get array back from get item we convert it again
+      let nm = parseInt(localStorage.getItem(arr));
+      console.log(typeof arr);
+    </script>
+  </body>
+</html>

@@ -7,6 +7,8 @@
     <title>create-remove-element</title>
   </head>
   <body>
+    <h1 id="css" style="color: blue; height: 15px">get css</h1>
+
     <ul id="lio" class="hio">
       <li class="lis">pink</li>
       <li id="opo" class="lis">orange</li>
@@ -43,6 +45,64 @@
       let ryun = document.getElementById("lio");
 
       ryun.replaceChild(ali, document.getElementById("opo"));
+
+      let fnm = document.createElement("p");
+      fnm.innerText = "hi my friend";
+      fnm.className = "oh";
+      fnm.setAttribute("title", "text");
+      console.log(fnm);
+
+      //switch
+      let scm = new Date().getDay();
+      let y;
+      switch (scm) {
+        case 0:
+          y = "monday";
+          break;
+        case 3:
+          y = "tuesday";
+          break;
+        default:
+          y = "invalid";
+      }
+      document.write(y);
+
+      let clr;
+      switch (clr) {
+        case 0:
+          clr = "black";
+          break;
+        case 1:
+          clr = "black";
+      }
+      document.write(clr);
+
+      let time = "11am";
+      switch (time) {
+        case "10am":
+          document.write("time to work");
+          break;
+        case "10am":
+          document.write("time to sleep");
+          break;
+        case "11am":
+          document.write("time to gym");
+          break;
+      }
+
+      let dy = new Date().getDate();
+      if (dy == 16) {
+        document.write("take class");
+      } else if (dy != 16) {
+        document.write("no class");
+      }
+      const css = document.getElementById("css");
+      const tyy = window.getComputedStyle(css);
+      console.log(tyy.color);
+
+      let saam = new Date().getDay();
+      let pdm = ["monday", "tuesday", "wednesday", "thursday"];
+      console.log(pdm[saam]);
     </script>
   </body>
 </html>

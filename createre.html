@@ -7,6 +7,12 @@
     <title>create-remove-element</title>
   </head>
   <body>
+    <ol class="lst">
+      <li>list 1</li>
+      <li>list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+    </ol>
     <h1 id="css" style="color: blue; height: 15px">get css</h1>
 
     <ul id="lio" class="hio">
@@ -103,6 +109,24 @@
       let saam = new Date().getDay();
       let pdm = ["monday", "tuesday", "wednesday", "thursday"];
       console.log(pdm[saam]);
+
+      let elment = document.createElement("ol");
+      elment.className = "haris";
+      elment.setAttribute("title", "text");
+      elment.id = "new";
+      elment.innerText = "hello this is  y id";
+      console.log(elment);
+      let apd = document.querySelector(".lst");
+      apd.appendChild(elment);
+      console.log(apd);
+
+      document.getElementById("css").addEventListener("click", function (e) {
+        console.log("you have click it");
+        console.log(e.target);
+      });
+
+      localStorage.setItem("name", "ali");
+      localStorage.getItem("name");
     </script>
   </body>
 </html>

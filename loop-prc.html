@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol id="list"></ol>
+    <script>
+      let li = document.getElementById("list");
+
+      let names = ["ali", "sam", "murtaza"];
+      //using for of
+
+      //   for (value of names) {
+      //     li.innerHTML += `<li>${value}</li>`;
+      //   }
+
+      //   using for in
+
+      // for(let key in names)
+      // {
+      //     li.innerHTML+=`<li>${names[key]}</li>`
+
+      // }
+
+      //using for loop
+      //   for (i = 0; i < names.length; i++) {
+      //       li.innerHTML+=`<li>${names[i]}</li>`
+
+      //   }
+
+      // //for each
+      //   names.forEach(function(e){
+      //       li.innerHTML+=`<li>${(e)}</li>`
+      //   })
+
+      //for while
+      let i = 0;
+      while (i < names.length) {
+        li.innerHTML += `<li>${names[i]}</li>`;
+
+        i++;
+      }
+    </script>
+  </body>
+</html>

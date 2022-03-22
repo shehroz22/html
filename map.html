@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map</title>
+  </head>
+  <body>
+    <script>
+      let rip = ["ali", "abdul", "smr", "ali"];
+      let sim = new Set(rip);
+      document.write(sim.delete("smr"));
+      for (value of sim) {
+        document.write(value);
+        // document.write(value.has("ali"));
+      }
+
+      let ltr = new Set();
+      ltr.add("A");
+      ltr.add("B");
+      ltr.add("C");
+      document.write(ltr.size);
+      let bop = ["blue", "white", "green", "green"];
+      nmpt = new Set(bop);
+      nmpt.forEach(function (element) {
+        document.write(element);
+      });
+
+      let mbbs = ["1", "2", "3"];
+      bbs = new Set(mbbs);
+      document.write(bbs.values());
+
+      let ruy = ["a", "b", "s", "s"];
+      yuy = new Set(ruy.values());
+      for (value of yuy) {
+        document.write(value);
+      }
+
+      let zoo = new Map();
+      zoo.set("gorilla", 5);
+      zoo.set("donkeys", 2);
+      zoo.set("monkeys", 8);
+      let rio = zoo.get("gorilla");
+      document.write(rio);
+      for (value of zoo) {
+        document.write(value);
+      }
+    </script>
+  </body>
+</html>

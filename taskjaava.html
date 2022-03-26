@@ -12,7 +12,7 @@
        text-align:center ;
        border-radius: 70px;
    
-background-color: brown;}
+background-color: rgb(207, 209, 74);}
     input{
       margin: 460px;
         
@@ -21,7 +21,8 @@ background-color: brown;}
 
   <body>
     <div id="kips" > </div>
-    <p id="imd"></p>
+    <p id="imd" style="background: black; color: white; width: 480px; font-size: 58px; margin-left: 450px; border-radius: 40px;padding-left: 40px;"></p>
+    
   </br>
     <input type="text" onchange="disp(this.value)">
     <script>
@@ -72,6 +73,7 @@ background-color: brown;}
       function disp(input_crs) {
           for (let i = 0; i < carss.length; i++) {
             checkData(carss[i], input_crs);
+            break
           }
         }
 
@@ -87,14 +89,13 @@ background-color: brown;}
                     `;
                     
           document.getElementById("kips").innerHTML = display;
-          return
-        
+      
           }
-          else{
-              let you=` not found`
+          else{ 
+              let you=` Not found`
               document.getElementById("imd").innerHTML=you
           }
-     
+          
       }
 
     

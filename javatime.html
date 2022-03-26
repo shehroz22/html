@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>age diff task</title>
+  </head>
+  <body>
+    <input type="date" id="you" />
+    <button id="getval" onclick="perthis()">click</button>
+    <p id="shw"></p>
+    <script>
+      function perthis() {
+        var bip = document.getElementById("you").value;
+        var got = new Date(bip);
+        // document.getElementById("shw").innerHTML = got;
+        // if () {
+        var timediff = Date.now() - got;
+
+        var dff = new Date(timediff);
+        var year = dff.getUTCFullYear;
+        var age = Math.abs(year - 1999);
+
+        return (document.getElementById(
+          "shw"
+        ).innerHTML = `"age"${age} ${year}`);
+
+        document.getElementById("shw").innerHTML = dff;
+      }
+      // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="txt" type="text" />
+    <button onclick="dothis()" id="btn">click me</button>
+    <p id="show"></p>
+
+    <script>
+      function dothis() {
+        try {
+          let gr = document.getElementById("txt").value;
+          if (gr.length == 0) {
+            throw "write anything";
+          } else if (gr.length == 2) {
+            throw "good";
+          }
+        } catch (error) {
+          document.getElementById("show").innerHTML = `please ${error}`;
+        } finally {
+          document.getElementById("show").innerHTML = gr;
+        }
+      }
+
+      //   function dothis() {
+      //     try {
+      //       let ver = document.getElementById("txt").value;
+      //       if (ver.length == 0) {
+      //         throw "please enter valid";
+      //       }
+      //       if (ver.length == 5) {
+      //         throw "value biiger";
+      //       }
+      //       let sim = (document.getElementById("show").innerHTML = ver);
+      //     } catch (error) {
+      //       let sim = (document.getElementById("show").innerHTML = error);
+      //     }
+      //   }
+
+      //   try {
+      //     document.getElementyId("tom");
+      //   } catch (error) {
+      //     console.log(error);
+      //   }
+
+      //   try {
+      //     document.getElemntById("ji");
+      //   } catch (error) {
+      //     console.log(error);
+      //   } finally {
+      //     console.log("no error found");
+      //   }
+    </script>
+  </body>
+</html>

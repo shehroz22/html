@@ -129,6 +129,11 @@
       for (let key in weather) {
         document.write(weather[key].type);
       }
+
+      let fhg = ["red", "green", "blue", "orange"];
+      fhg.forEach(function (element) {
+        document.write(element.slice(1, 3));
+      });
     </script>
   </body>
 </html>

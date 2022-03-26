@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bulb-2</title>
+  </head>
+  <body>
+    <img id="img" src="././pic_bulboff.gif" alt="" />
+    <button onclick="perform(1)"></button>
+    <button onclick="perform(0)"></button>
+    <script>
+      function perform(show) {
+        var pic;
+        if (show == 0) {
+          img.src = "pic_bulboff.gif";
+        } else {
+          img.src = "pic_bulbon.gif";
+        }
+        document.getElementById("img")= pic;
+      }
+    </script>
+  </body>
+</html>

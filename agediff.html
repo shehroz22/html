@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <input placeholder="date" type="number" id="date" />
+    <input placeholder="month" type="number" id="month" />
+    <input placeholder="year" type="number" id="year" />
+    <br />
+    <br />
+
+    <button onclick="age()">calculate</button>
+    <p id="show"></p>
+    <script>
+      function age() {
+        var date1 = document.getElementById("date").value;
+        var month1 = document.getElementById("month").value;
+        var year1 = document.getElementById("year").value;
+
+        var dates = new Date();
+        var date2 = dates.getDate();
+        var month2 = 1 + dates.getMonth();
+        var year2 = dates.getFullYear();
+        var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        if (date1 > date2) {
+          date2 = date2 + months[month2 - 1];
+          month2 = month2 - 1;
+        }
+        if (month1 > month2) {
+          month2 = month2 + 12;
+          year2 = year2 - 1;
+        }
+        var d = date2 - date1;
+        var m = month2 - month1;
+        var y = year2 - year1;
+
+        document.getElementById("show").innerHTML =
+          "Your Age is " + y + " Years " + m + " Months " + d + " Days";
+      }
+    </script>
+  </body>
+</html>

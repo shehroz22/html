@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p style="border: black 2px solid" id="dte">click button for time</p>
+    <br /><br /><br />
+    <button onclick="doit()">click on button</button>
+    <script>
+      function doit() {
+        const tip = new Date();
+        const tip_b = tip.toUTCString();
+        document.getElementById("dte").innerHTML = tip_b;
+      }
+    </script>
+  </body>
+</html>

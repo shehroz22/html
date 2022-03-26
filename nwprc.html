@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">name</label><input id="nme" type="text" />
+    <br />
+    <label for="">height</label><input id="hght" type="text" /><br />
+    <label for="">gender</label><input id="gndr" type="text" />
+    <button onclick="dothis()">submit</button>
+    <p id="data_play"></p>
+
+    <script>
+      var dataf = [
+        {
+          Name: "abdul",
+          Gender: "Male",
+          Age: "21",
+        },
+        {
+          Name: "Sameer",
+          Gender: "Female",
+          Age: "19",
+        },
+        {
+          Name: "Shehroz",
+          Gender: "Male",
+          Age: "23",
+        },
+      ];
+      function dothis() {
+        var write_name = document.getElementById("nme").value;
+        var write_hght = document.getElementById("hght").value;
+        var write_gndr = document.getElementById("gndr").value;
+
+        const store = {
+          Name: write_name,
+          Gender: write_hght,
+          Age: write_gndr,
+        };
+        dataf.push(store);
+        showsthis();
+      }
+
+      function showsthis() {
+        document.getElementById("data_play").innerHTML = "";
+
+        for (let item of dataf.values()) {
+          var person = item;
+          const shw = `
+      <ol>
+          <h2>${person.Name}</h2>
+          <h2>${person.Gender}</h2>
+          <h2>${person.Age}</h2>
+       <ol>
+             `;
+
+          document.getElementById("data_play").innerHTML += shw;
+        }
+      }
+    </script>
+  </body>
+</html>

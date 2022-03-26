@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task2</title>
+  </head>
+  <body>
+    <input type="date" id="nop" />
+    <button onclick="dothis()">click me</button>
+    <p id="show"></p>
+    <script>
+      //   const months = [
+      //     "January",
+      //     "February",
+      //     "March",
+      //     "April",
+      //     "May",
+      //     "June",
+      //     "July",
+      //     "August",
+      //     "September",
+      //     "October",
+      //     "November",
+      //     "December",
+      //   ];
+
+      //   const date_Time = new Date();
+      //   let month = months[date_Time.getMonth()];
+      //   date_Time.setDate(06);
+      //   date_Time.setFullYear(1999);
+      //   date_Time.getMilliseconds(1997);
+
+      //   document.getElementById("show").innerHTML = date_Time;
+
+      function dothis() {
+        let trip_b = document.getElementById("nop").value;
+        if (trip_b) {
+          let trip_b = new Date();
+          trip_b.setDate(06);
+          trip_b.setFullYear(1999);
+          trip_b.getMilliseconds(1997);
+          document.getElementById("show").innerHTML = trip_b;
+        }
+      }
+    </script>
+  </body>
+</html>

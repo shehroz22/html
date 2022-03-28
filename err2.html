@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      try {
+        document.wrie("RR");
+      } catch (error) {
+        document.write(error);
+      } finally {
+        document.write("finaly");
+      }
+
+      //global variable
+      let x = "hi";
+      function dothis() {
+        document.write(x);
+      }
+      dothis();
+
+      //infunction
+
+      function dothis() {
+        let y = "this";
+        document.write(x);
+      }
+      dothis();
+      document.write(x);
+
+      //hoisting is when we declare function or var declaration abve the starting or top of code before code execution
+      function dsum(a, b) {
+        sm = a + b;
+        console.log(sm);
+      }
+      dsum(2, 2);
+
+      //this
+      const name = {
+        Name: "ali",
+        class: "first",
+        detail: function () {
+          console.log(this.class);
+        },
+      };
+      try {
+        const name = {
+          Name: "ali",
+          class: "first",
+          detail: function () {
+            console.log(this.class);
+          },
+        };
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+  </body>
+</html>

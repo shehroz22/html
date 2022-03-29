@@ -58,6 +58,47 @@
       } catch (error) {
         console.log(error);
       }
+
+      ("use strict");
+      const re = 5;
+      console.log(re);
+
+      // function dot() {
+      //   "use strict";
+      //   c = 76;
+      //   console.log(c);
+      // }
+      // dot();
+
+      const prs = {
+        color: "blue",
+        number: "9",
+        do: function () {
+          return this.number;
+        },
+        change: (color = "orange"),
+      };
+      document.write(prs.do());
+      document.write(prs.change);
+
+      //call
+
+      const sim = {
+        firstName: "ali",
+        lastName: "khan",
+        dhis: function () {
+          return this.firstName + this.lastName;
+          // document.write(dhis())
+        },
+      };
+
+      document.write(sim.dhis());
+
+      const him = { firstName: "zakir", lastName: "kabir" };
+      const show = sim.dhis.call(him);
+      const how = sim.dhis.bind(him);
+      document.write(show);
+      document.write(how());
     </script>
   </body>
 </html>

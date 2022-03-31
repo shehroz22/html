@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow-class</title>
+  </head>
+  <body>
+    <p id="one"></p>
+    <p id="two"></p>
+    <p id="three"></p>
+
+    <script>
+      // import { sdo } from "./export.js";
+      // console.log(sdo(5));
+      // import a from "./export.js";
+      // console.log(a);
+
+      //   function hi() {
+      //     document.getElementById("one").innerHTML = "hello";
+      //   }
+      //   hi();
+
+      //   let hello;
+      //   hello = () => {
+      //     document.write("hi my friend");
+      //   };
+      //   hello();
+
+      //   second = function () {
+      //     document.getElementById("two").innerHTML = "secodn type";
+      //   };
+      //   second();
+
+      //   third = (enemy) => {
+      //     var y = document.getElementById("three");
+      //     y.innerHTML = "my real" + enemy;
+      //   };
+      //   third("enemy");
+      //   arr = () => {
+      //     document.write("hiohe");
+      //   };
+      //   arr();
+      //   ///
+
+      //   //   class user {
+      //   //     constructor(aname, aage) {
+      //   //       this.name = aname;
+      //   //       this.age = aage;
+      //   //     }
+      //   //   }
+      //   //   var user1 = new user("ali", "12");
+      //   //   document.write(user1.name);
+      //   //   document.write(user1.age);
+
+      //   //   let car = {
+      //   //     name: "honda",
+      //   //     color: "brouce",
+      //   //     wow: () => {
+      //   //       document.write("is a good car");
+      //   //       //       document.write(car.name);
+      //   //       //   document.write(car.color);
+      //   //       //   document.write(car.wow());
+      //   //     },
+      //   //   };
+      //   //   document.write(car.name);
+      //   //   document.write(car.color);
+      //   //   document.write(car.wow());
+      //   //   car;
+
+      //   //   wow();
+
+      //   //   class clr {
+      //   //     constructor(dark, light) {
+      //   //       this.a = dark;
+      //   //       this.b = light;
+      //   //     }
+      //   //     add() {
+      //   //       return this.a + this.b;
+      //   //     }
+      //   //   }
+      //   //   document.write("</br>")
+      //   //   let n = new clr("1", "2");
+      //   //   document.write(n.add());
+
+      //   class clr {
+      //     add(ab, bs) {
+      //       this.a = ab;
+      //       this.b = bs;
+      //       return this.a * this.b;
+      //     }
+      //     sub(ab, bs) {
+      //       this.a = ab;
+      //       this.b = bs;
+      //       return this.a - this.b;
+      //     }
+      //     div(ab, bs) {
+      //       this.a = ab;
+      //       this.b = bs;
+      //       return this.a / this.b;
+      //     }
+      //   }
+      //   document.write("</br>");
+      //   let n = new clr();
+      //   document.write(n.add("2", "2"));
+      //   document.write(n.sub("3", "5"));
+      //   document.write(n.div("2", "2"));
+
+      //json
+      //its a format for storing and transporting data
+      //for json data we use doblle quotes
+      //   "firstName":"Khan"
+      //json obects are written inside curly braces
+      // {"firstName":"Ali","lastName":"Khan"}
+      //json array is written inside square bracket
+
+      // "grades":[{"class-A":"70","class-B":"80"},
+      // {"class-C":"60","class-D":"90"},
+      // {"class-E":"50","class-F":"40"}]
+
+      //NOW TO READ JSON FILE WE NEED TO PUT IT IN STRING THEN JSON PARSE TO CONVERT IN OBJECT AFTER THAT WE CAN USE IT IN OUR JAVASCRIPT
+
+      const data = `{
+    "totalPassengers": 6,
+    "totalPages": 6,
+    "data": [
+        {
+            "_id": "5eef7f1bdfaf515ddc9feade",
+            "name": "Saman Jeewantha",
+            "trips": 500,
+            "airline": [
+                {
+                    "id": 4,
+                    "name": "Emirates",
+                    "country": "Dubai",
+                    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/150px-Emirates_logo.svg.png",
+                    "slogan": "From Dubai to destinations around the world.",
+                    "head_quaters": "Garhoud, Dubai, United Arab Emirates",
+                    "website": "www.emirates.com/",
+                    "established": "1985"
+                }
+            ],
+            "__v": 0
+        }
+    ]
+}`;
+
+      let vip = JSON.parse(data);
+      document.write(vip.totalPassengers);
+
+      let rim = [
+        (passenger1 = {
+          name: "ali",
+          ticket: "08",
+        }),
+        (passenger2 = {
+          name: "cali",
+          ticket: "a08",
+        }),
+        (passenger3 = {
+          name: "fali",
+          ticket: "s08",
+        }),
+      ];
+      let fdb = JSON.stringify(rim);
+      document.write(fdb);
+    </script>
+  </body>
+</html>

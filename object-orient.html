@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object orienting programming</title>
+  </head>
+  <body>
+    <h3>In this section i have practiced about object oriented programming</h3>
+
+    <script>
+      //there are 4 pillars of object oriented programming
+      //1Encapsilation in this we group together related variable and function to reduce complications and can use this object in different places
+
+      //2abstraction we hide detailwe hide properties and methods from outside to make interface of object simpler  and second benfit is that retail impact of change is small if we wanna change something in future it will not be changed for everything and impact of change will be limited
+
+      //3inheritance this allow to eliminate abundant code.example like buttons textbox and checkboz they all have something similarlike clik()etc. so if we wanna change property for them we have change for every each button text and check so what we do is define html object with the property as a separate and then ask those button check tetx to inherit them
+
+      //4 polymorphism means that if we use different cases and switches we have to use it separetly for each case but with polimorphism we use render method for all of them to go to that object in which we store the mehthod and work according to situation instead of long stch and if cases .
+
+      //////////============================================================================///////////
+
+      //object literals
+      //in es6 we use const and let
+
+      const obj = {
+        //object literal strat with curly braces its collection of key value pairs
+        name: "ali",
+        address: { home: "newyork", school: "alexandria" },
+        do: function () {
+          document.write("adasjdh");
+          ///here we have one method which is function do the other two members are property in object oriented programming
+        },
+      };
+      obj.do();
+
+      //now if we have alot of methods like functions in object and we wanna do changes in it it will become difficult because many methods in object become a behaviour
+      //so we can use factory and solution to make such objects with behaviours
+
+      //factory function
+
+      //   function createCircle(radius) {
+      //     return {
+      //       //   name: "ali",
+      //       //in es6 if key value is same we remove the value write it once
+      //       radius,
+      //       draw: function () {
+      //         console.log("hi factory");
+      //       },
+      //     };
+      //   }
+      //   const circle = createCircle(1);
+
+      //constructor function
+      function Circle(radius) {
+        console.log("this", this);
+        this.radius = radius;
+        this.circle = function () {
+          console.log("oh oh ");
+        };
+      }
+      const another = new Circle(2);
+      //here new objet is create to define value of this used above if we dont use new the "this" will be considered globally
+
+      ///in general if we use this in function it refers to constructor function if we use return it refers to factory function
+
+      //CONSTRUCTOR PROPERTY:
+      //javascript conatin internal constructor for every object
+      //for example
+      let x = {};
+      //if we write x.constructor it will show it internally in javscript like
+      //let x= new object
+
+      //functions are object
+      function square(radius) {
+        this.radius = radius;
+        this.draw = function () {
+          console.log("hi");
+        };
+      }
+      //method for function object
+      square.call({}, 1, 2, 3);
+      //method2
+      square.apply({}, [1, 3, 4]);
+
+      //   const csacahi = new square(23);
+
+      //we have two types in javascript
+      //value type or primitive
+      //number,string,boolean,undefined,null
+      let r = 10;
+      let c = r;
+      r = 20;
+      document.write(c);
+      //in value tpe variables are independent of eachother
+
+      //reference type
+      //object,function,array
+
+      let z = { value: 10 };
+      let s = z;
+      z.value = 20;
+      document.write(s.value);
+
+      //primitives are copied by values
+      //reference types are copied by reference like value: 10 where value is stred as address in variable z not like value
+
+      //   let number = 10;
+      //   function increase(number) {
+      //     increase++;
+      //   }
+      //   increase(number);
+      //   document.write(increase);
+      //it will not work as primitive are copied by value and are independent of eachother so if we use reference then it will work
+      //   let bbj = { value: 10 };
+      //   function increase(bbj) {
+      //     bbj.value++;
+      //   }
+      //   increase(bbj);
+      //   document.write(bbj.value);
+      //we can add extra properties to object like adding removing properties
+      function hole(radius) {
+        this.radius = radius;
+        this.draw = function () {
+          console.log("adwaswd");
+        };
+      }
+      const bvb = new hole(10);
+      bvb.location = { x: 1 };
+      //here we added the property location
+
+      delete bvb.location;
+      //or
+      delete bvb[location];
+      console.log(bvb);
+
+      //in javascrip object oriented programming when we have alot of properties and methods and we dont wanna clients see everything because it increase the complexity so we hide such details
+      //   function hole(radius) {
+      //     //here this refer to new hole constructor so we can change this to let in order to hide methods and properties
+      //     // this.radius = radius;
+      //     let radius = radius;
+      //     this.draw = function () {
+      //       console.log("adwaswd");
+      //     };
+      //   }
+      //   const vbvb = new hole(10);
+
+      //   console.log(vbvb);
+      //getters/setters
+      //way to get set properties of an object
+      //   const user = {
+      //     firstName: "",
+      //     lastName: "",
+      //     fullName: function () {
+      //       return this.firstName + " " + this.lastName;
+      //     },
+      //   };
+      //   user.firstName = "spongbob";
+      //   user.lastName = "sqaurepants";
+      //   document.write(user.fullName());
+
+      class user {
+        constructor(first, last) {
+          this.first = first;
+          this.last = last;
+        }
+        set first(value) {
+          this.firstName = value.toUpperCase();
+        }
+        set last(value) {
+          this.lastName = value.toUpperCase();
+        }
+        get fullName() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+      let auser = new user("spdngebob", "squarepants");
+      document.write(auser.fullName);
+    </script>
+  </body>
+</html>

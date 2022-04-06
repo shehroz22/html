@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //ES2017//
+      //padstart
+
+      let x = "5";
+      x = x.padStart(5, 0);
+      console.log(x);
+
+      let y = "4";
+      y = y.padEnd(4, 0);
+      console.log(y);
+      //object entries
+      let user = {
+        name: "ali",
+        class: "12",
+      };
+      console.log(Object.entries(user));
+      console.log(Object.values(user));
+      //es6 power
+      let r = 4;
+      r = Math.pow(r, 4);
+      console.log(r);
+      const arr = ["mangoe", "apple"];
+      let f = arr.includes("mangoe");
+      console.log(f);
+
+      function fun() {
+        console.log("norm func");
+      }
+      fun();
+      fut = () => {
+        console.log("arrow func");
+      };
+      fut();
+      //for of
+      let fruits = ["mango", "apple", "orrange"];
+      for (let fruit of fruits) {
+        fruits += fruit + "";
+        console.log(fruit);
+      }
+
+      //for of on string
+      let clr = "dscs";
+      let tct = "";
+      for (let c of clr) {
+        tct = c;
+        console.log(tct);
+      }
+
+      //map
+      const apple = { name: "apple" };
+      const grape = { name: "grape" };
+      let hjp = new Map();
+      hjp.set(apple.name, 20);
+      hjp.set(grape.name, 60);
+      console.log(hjp);
+      //set
+
+      const letters = new Set();
+      letters.add("a");
+      console.log(letters);
+      //constructor
+      class person {
+        constructor(name) {
+          this.name = name;
+        }
+      }
+      const dap = new person("ali");
+      console.log(dap);
+
+      //...args
+      //   function funct(a, b) {
+      //     return a + b;
+      //   }
+      //   console.log(funct(1, 2));
+      //now if we have alot of argument it will not be added so we use arg statement
+
+      function funct(...args) {
+        let total = 0;
+        for (let i in args) {
+          total += args[i];
+        }
+        return total;
+      }
+      console.log(funct(1, 2, 3, 4));
+      //array from string
+      const rf = "abcd";
+      const gip = Array.from(rf);
+      console.log(typeof gip);
+      //find index
+      const number = [1, 2, 3, 4, 5];
+      const g = number.findIndex(carr);
+      function carr(value) {
+        return value === 3;
+      }
+      console.log(g);
+      //bind
+      const fio = {
+        name: "sher",
+        age: "23",
+        func: function () {
+          return this.name + " " + this.age;
+        },
+      };
+      const nbn = {
+        name: "gip",
+        age: "78",
+      };
+      let alii = fio.func.bind(nbn);
+      console.log(alii());
+      //debugger
+      let s = 5 * 5;
+      debugger;
+      console.log(s);
+    </script>
+  </body>
+</html>

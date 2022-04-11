@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+      function myDisplay(sot) {
+        document.getElementById("demo").innerHTML = sot;
+      }
+      function disp1() {
+        myDisplay("hi");
+      }
+      function disp2() {
+        myDisplay("hi 2");
+      }
+      disp2();
+      disp1();
+
+      //sequence control
+      function mycalculation(some) {
+        document.getElementById("demo2").innerHTML = some;
+      }
+      function sum(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+      }
+      let result = mycalculation(2, 6);
+      mycalculation(result);
+
+      function calca(t) {
+        document.getElementById("demo3").innerHTML = t;
+      }
+      function thiscal(nw, ns, myCallback) {
+        let s = nw + ns;
+        myCallback(s);
+      }
+      thiscal(2, 5, calca);
+      //   setTimeout(funct, 3000);
+      //   function funct() {
+      //     document.getElementById("demo4").innerHTML = "adasda";
+      //   }
+
+      setInterval(funct, 1000);
+      function funct() {
+        document.getElementById("demo4").innerHTML = new Date();
+      }
+
+      //any function that is passed as an argument
+      //a call back function has to be executed after another function is already executed
+
+      //   const funA = () => {
+      //     console.log("hi i shehroz");
+      //   };
+
+      //   const funb = () => {
+      //     console.log("hi i abdul");
+      //   };
+
+      const funA = () => {
+        setTimeout(function () {
+          console.log("hi i shehroz");
+          funb();
+        }, 3000);
+      };
+      //now here first abdul will be shown as we set time for shehroz but in real life we come across websites where we dont want to show one page whereas rest of pages are being loading so we use callback to wait untill that function for first page is executed then callback the second function
+      const funb = () => {
+        console.log("hi i abdul");
+      };
+
+      funA();
+      //here we can simply move funb to settime to fix that problem to show them together
+      //   funb();
+
+      //Now according to this definition any function that is passed as an argument
+
+      const perA = (friend, callBack) => {
+        console.log(`i am busy will call later ${friend}`);
+        callBack();
+      };
+      const perB = (friend) => {
+        console.log(`i call you back now i am free`);
+      };
+      perA("ali", perB);
+      //here we passed the function perb as an argument in per A to be callback
+
+      //promise///
+      //its is basically object that watch the process u are doing is it complete or not and if itscomplete what is the next step
+      //it has three steps 1 pending 2 resove 3 reject
+
+      //when we make new process we have to call function name as executer and pass two parameters
+      //   const pro = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       const a = [1, 2, 3, 4, 5];
+      //       //   resolve(a);
+      //       reject("error occur");
+      //     }, 2000);
+      //   });
+      //   pro.then((a) => {
+      //     console.log(a);
+      //   });
+      //   //when promise is complete we use resolve and use then
+      //   //when we use then we have to specify one function that have parameter to acces the promise (a) and display it
+      //   pro.catch((e) => {
+      //     console.log(e);
+      //   });
+
+      //now using promise as object
+      const pro2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const a = [1, 2, 3, 4, 5];
+          resolve(a);
+          //   reject("error occur");
+        }, 2000);
+      });
+
+      const probio = (b) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(
+            (b) => {
+              let biodata = {
+                name: "ali",
+                age: "23",
+              };
+              resolve(`my roll numer${b}. my age is${biodata.age}`);
+            },
+            4000,
+            b
+          );
+        });
+      };
+
+      //   pro2
+      //     .then((a) => {
+      //       console.log(a);
+      //       return probio(a[1]);
+      //     })
+      //     .then((kasca) => {
+      //       console.log("kusc");
+      //     });
+
+      //   pro2.catch((e) => {
+      //     console.log(e);
+      //   });
+
+      //async//await
+      //   the word async is used with promises in place of then and it means that the function will only return promise not value
+
+      async function getdata() {
+        const ndew = await pro2;
+        console.log(ndew);
+        const fiiu = await probio(ndew[1]);
+        console.log(fiiu);
+      }
+      getdata();
+    </script>
+  </body>
+</html>

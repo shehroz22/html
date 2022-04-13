@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="shw"></p>
+    <script>
+      //   function myfun() {
+      //     a = 5;
+      //     b = 3;
+      //     let sum = a * b;
+      //     document.write(sum);
+      //   }
+      //   myfun();
+      //   //function stored in variable donot need name
+      //   constv = function () {
+      //     document.write("hie");
+      //   };
+      //   document.write(constv)
+      //self invoking function
+      //     (function () {
+      //       document.write("invoke");
+      //     }
+      //   )();
+      //hoisting
+      //     mydi()
+      //     function mydi(){
+      //         document.write("hoisting")
+      //     }
+
+      //     //function as string
+
+      //     function mydi(){
+      //         document.write("hoisting")
+      //     }
+      // document.getElementById("shw").innerHTML=mydi().toString()
+
+      arr = () => {
+        document.write("hi howa r u");
+      };
+      arr();
+
+      dsd = (a, v) => {
+        fg = a * v;
+        document.write(fg);
+      };
+      //using this
+      //   dsd(4, 2);
+      //   const data={
+      //       firstName:"ali",
+      //       lastName:"khan",
+      //       fullName:function(){
+      //           return this.firstName + this.lastName
+      //       }
+
+      //   }
+      //   document.write(data.fullName())
+
+      dsd(a, b);
+      const data = {
+        firstName: "ali",
+        lastName: "khan",
+        fullName: function (a, b) {
+          return this.firstName + this.lastName + a + b;
+        },
+      };
+
+      const fht = {
+        firstName: "abdul",
+        lastName: "ghad",
+      };
+      const jkl = {
+        firstName: "sameer",
+        lastName: "liaqat",
+      };
+
+      // document.write(data.fullName.call(jkl))
+
+      document.write(data.fullName.apply(jkl, ["jhng", "vaih"]));
+    </script>
+  </body>
+</html>

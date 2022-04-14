@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   class User {
+      //     constructor(user, email) {
+      //       this.name = user;
+      //       this.email = email;
+      //     }
+      //   }
+      //   var userOne = new User("ali", "hygmaik");
+      //   console.log(userOne);
+
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.age = year;
+        }
+        cage() {
+          let data = new Date();
+          return data.getFullYear() - this.year;
+        }
+      }
+      let carOne = new Car("honda", 2013);
+
+      //   console.log(carOne.name);
+
+      console.log(carOne.cage());
+
+      class Student {
+        constructor(nme, rllnme) {
+          this.Student = nme;
+          this.roll = rllnme;
+        }
+      }
+      class Teacher extends Student {
+        constructor(nme, phone) {
+          super(nme);
+          this.phone = phone;
+        }
+      }
+      //   const dbnn = new Student("ali", "45");
+      const plka = new Teacher("syed", "0423231");
+      console.log(plka);
+      //   console.log(dbnn);
+      class Ccar {
+        constructor(brand) {
+          this.carName = brand;
+        }
+        get cnam() {
+          return this.carName;
+        }
+        set cnam(x) {
+          this.carName = x;
+        }
+      }
+      const bvb = new Ccar("ford");
+      let ffdf = (bvb.cnam = "fof");
+      console.log(ffdf);
+
+      class Cket {
+        constructor(nbm) {
+          this.ticket = nbm;
+        }
+        static jki() {
+          return "ssds";
+        }
+      }
+      let fgfg = new Cket("asa");
+      console.log(Cket.jki());
+    </script>
+  </body>
+</html>

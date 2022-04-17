@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   //a function that is passed in argument is called callback
+      //   //a function that is to be executed after first function has finished executing
+      //   //   const fnA = () => {
+      //   //     console.log("hi my friend");
+      //   //   };
+      //   //   const fnB = () => {
+      //   //     console.log("hi my enemy");
+      //   //   };
+      //   //   fnA();
+      //   //   fnB();
+      //   const fnA = () => {
+      //     setTimeout(function () {
+      //       console.log("hi my friend");
+      //       fnB();
+      //     }, 3000);
+      //   };
+      //   const fnB = () => {
+      //     console.log("hi my enemy");
+      //   };
+      //   fnA();
+
+      //   //how to pass callback in argument
+      //   //   const prA = (ali) => {
+      //   //     console.log(`hi i busy with ${ali}talk later`);
+      //   //   };
+      //   //   const prB = () => {
+      //   //     console.log(`hi lets talk`);
+      //   //   };
+      //   //   prA("ali");
+      //   //   prB();
+
+      //   const prA = (ali, callBack) => {
+      //     console.log(`hi i busy with ${ali}talk later`);
+      //     callBack();
+      //   };
+      //   const prB = () => {
+      //     console.log(`hi lets talk`);
+      //   };
+      //   prA("ali", prB);
+
+      //synchronous means when the first thing is not completed we cannot start second method
+      //asynchronous means we donot have to wait for first thing we can do multiple things at same time while first thing is been done
+      ///promise is object that keep track of an evet happened it trak whether event is happened or not
+      //alo that what will happen after that event
+      //it is used with asynchronous where there is alot of callback and its not managable so we use call back
+
+      //   const usef = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       let arrg = [1, 2, 3, 4, 5];
+      //       resolve(arrg);
+      //       //   reject("promise is rejected");
+      //     }, 2000);
+      //   });
+      //   const neqr = (rlp) => {
+      //     new Promise((resolve, reject) => {
+      //       setTimeout(
+      //         (rlp) => {
+      //           let nrrt = {
+      //             name: "ali",
+      //           };
+
+      //           resolve(`hi my name is ${nrrt.name} and i am ${rlp}`);
+      //         },
+      //         2000,
+      //         rlp
+      //       );
+      //     });
+      //   };
+
+      //   usef.then((arrg) => {
+      //     console.log(arrg);
+      //     neqr(arrg[1]).then((eremm) => {
+      //       console.log(eremm);
+      //     });
+      //   });
+
+      //   usef.catch((error) => {
+      //     console.log(error);
+      //   });
+      //   async function ftfy() {
+      //     const ghft = await usef;
+      //     console.log(ghft);
+      //     const vcvc = await neqr(arrg[1]);
+      //     console.log(vcvc);
+      //   }
+      //   ftfy();
+
+      //   const myPromise = fetch(
+      //     "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+      //   );
+      //   //   console.log(myPromise);
+      //   myPromise.then((res) => {
+      //     console.log(res);
+      //     const fjson = res.json();
+      //     const fjsoc = res.status;
+      //     console.log(fjson);
+      //     console.log(fjsoc);
+      //     fjson.then((data) => {
+      //       console.log(data[0]);
+      //     });
+      //   });
+    </script>
+  </body>
+</html>

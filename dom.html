@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="one" class="uip"></p>
+    <p id="two" class="uip"></p>
+    <p id="three" class="ahmed"></p>
+    <p id="four" class="ali">
+      <h1 id="bkl">heading</h1>
+  blue color</p>
+    <input type="text" name="" id="bhu" />
+    <script>
+      //when a web page is loaded javascript creates a new document object model of a page which is a tree  type structure
+
+      //in this following example//
+      //document.get element by id=inner html
+      // document..id is method while inner html is property
+      let fio = (document.getElementById("one").innerHTML = "hi my friend");
+      console.log(fio);
+      let fiotwo = (document.getElementsByClassName("uip").innerHTML =
+        "hi my friend");
+      console.log(fiotwo);
+      let fiothree = (document.getElementsByTagName("ali").innerHTML =
+        "kya horha h bhai");
+      console.log(fiothree);
+
+      //above ones are methods now lets do with property
+      let fiofour = (document.getElementById("four").style.color = "blue");
+ 
+      document.getElementById("bhu").setAttribute("id", "full");
+
+      // let fiofive = (document.getElementById("four").removeChild())
+
+
+//       // document.body
+// <body jsmodel=​"hspDDf" class=​"srp" jscontroller=​"Eox39d" marginheight=​"3" topmargin=​"3" jsaction=​"rcuQ6b:​npT2md;​YUC7He:​.CLIENT;​IVKTfe:​.CLIENT;​KsNBn:​.CLIENT;​sbTXNb:​.CLIENT;​xjhTIf:​.CLIENT;​O2vyse:​.CLIENT;​Ez7VMc:​.CLIENT;​qqf0n:​.CLIENT;​me3ike:​.CLIENT;​IrNywb:​.CLIENT;​Z94jBf:​.CLIENT;​A8708b:​.CLIENT;​YcfJ:​.CLIENT;​VM8bg:​.CLIENT;​hWT9Jb:​.CLIENT;​WCulWe:​.CLIENT;​NTJodf:​.CLIENT;​szjOR:​.CLIENT;​PY1zjf:​.CLIENT;​wnJTPd:​.CLIENT;​JL9QDc:​.CLIENT;​kWlxhc:​.CLIENT;​qGMTIf:​.CLIENT;​aeBrn:​.CLIENT" id=​"gsr" data-new-gr-c-s-check-loaded=​"14.1057.0" data-gr-ext-installed>​…​</body>​
+// document.removeChld(jsmodel)
+// VM280:1 Uncaught ReferenceError: jsmodel is not defined
+//     at <anonymous>:1:22
+// (anonymous) @ VM280:1
+// document.doctype
+// <!DOCTYPE html>
+// document.DOCUMENT_FRAGMENT_NODE
+// 11
+// document.documentURI
+// 'https://www.google.com/search?gs_ssp=eJzj4tTP1TcwzMmrTDNg9JIoz0zOyCxJVCguSSxJVSjNyyxLLSrOLKkEAOakDTg&q=wichita+state+university&rlz=1C1CHBD_enPK893PK893&oq=wi&aqs=chrome.3.69i57j35i39l2j46i67l2j69i60l3.2672j0j4&sourceid=chrome&ie=UTF-8'
+// document.domain
+// 'www.google.com'
+// document.domConfig
+// undefined
+// document.embeds
+// HTMLCollection []
+// document.images
+// HTMLCollection(52) [img, img.gb_Aa.gbii, img.UCAEse, img.UCAEse, img.UCAEse, img#tsuid20.kAOS0, img.fTE6nf, img.fTE6nf, img.fTE6nf, img.JOmIqc, img, img#dimg_1.YQ4gaf.zr758c.wA1Bge, img#dimg_5.YQ4gaf.zr758c.wA1Bge, img#dimg_7.YQ4gaf.zr758c.wA1Bge, img#dimg_9.YQ4gaf.zr758c.wA1Bge, img#dimg_11.YQ4gaf.zr758c.wA1Bge, img#dimg_50, img#dimg_55.YQ4gaf.zr758c, img#dimg_49, img#dimg_56.YQ4gaf.zr758c, img#dimg_53, img#dimg_59.YQ4gaf.zr758c, img#dimg_37, img#dimg_41, img#dimg_39, img#dimg_47, img#dimg_43, img#dimg_45, img#dimg_35, img#dimg_3.YQ4gaf.zr758c, img#dimg_15.YQ4gaf.zr758c, img#dimg_13.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img.YQ4gaf.zr758c, img#dimg_27.YQ4gaf.zr758c.wA1Bge, img#dimg_29.YQ4gaf.zr758c.wA1Bge, img#dimg_31.YQ4gaf.zr758c.wA1Bge, img#dimg_33.YQ4gaf.zr758c.wA1Bge, img#dimg_17.YQ4gaf.zr758c.wA1Bge, img#dimg_19.YQ4gaf.zr758c.wA1Bge, img#dimg_21.YQ4gaf.zr758c.wA1Bge, img#dimg_23.YQ4gaf.zr758c.wA1Bge, img#dimg_25.YQ4gaf.zr758c.wA1Bge, img#tsuid92.LV5Kte, img#tsuid95.LV5Kte, img#tsuid97.LV5Kte, img#tsuid99.LV5Kte, tsuid20: img#tsuid20.kAOS0, dimg_1: img#dimg_1.YQ4gaf.zr758c.wA1Bge, dimg_5: img#dimg_5.YQ4gaf.zr758c.wA1Bge, dimg_7: img#dimg_7.YQ4gaf.zr758c.wA1Bge, dimg_9: img#dimg_9.YQ4gaf.zr758c.wA1Bge, …]0: img1: img.gb_Aa.gbii2: img.UCAEse3: img.UCAEse4: img.UCAEse5: img#tsuid20.kAOS06: img.fTE6nf7: img.fTE6nf8: img.fTE6nf9: img.JOmIqc10: img11: img#dimg_1.YQ4gaf.zr758c.wA1Bge12: img#dimg_5.YQ4gaf.zr758c.wA1Bge13: img#dimg_7.YQ4gaf.zr758c.wA1Bge14: img#dimg_9.YQ4gaf.zr758c.wA1Bge15: img#dimg_11.YQ4gaf.zr758c.wA1Bge16: img#dimg_5017: img#dimg_55.YQ4gaf.zr758c18: img#dimg_4919: img#dimg_56.YQ4gaf.zr758c20: img#dimg_5321: img#dimg_59.YQ4gaf.zr758c22: img#dimg_3723: img#dimg_4124: img#dimg_3925: img#dimg_4726: img#dimg_4327: img#dimg_4528: img#dimg_3529: img#dimg_3.YQ4gaf.zr758c30: img#dimg_15.YQ4gaf.zr758c31: img#dimg_13.YQ4gaf.zr758c32: img.YQ4gaf.zr758c33: img.YQ4gaf.zr758c34: img.YQ4gaf.zr758c35: img.YQ4gaf.zr758c36: img.YQ4gaf.zr758c37: img.YQ4gaf.zr758c38: img.YQ4gaf.zr758c39: img#dimg_27.YQ4gaf.zr758c.wA1Bge40: img#dimg_29.YQ4gaf.zr758c.wA1Bge41: img#dimg_31.YQ4gaf.zr758c.wA1Bge42: img#dimg_33.YQ4gaf.zr758c.wA1Bge43: img#dimg_17.YQ4gaf.zr758c.wA1Bge44: img#dimg_19.YQ4gaf.zr758c.wA1Bge45: img#dimg_21.YQ4gaf.zr758c.wA1Bge46: img#dimg_23.YQ4gaf.zr758c.wA1Bge47: img#dimg_25.YQ4gaf.zr758c.wA1Bge48: img#tsuid92.LV5Kte49: img#tsuid95.LV5Kte50: img#tsuid97.LV5Kte51: img#tsuid99.LV5Ktedimg_1: img#dimg_1.YQ4gaf.zr758c.wA1Bgedimg_3: img#dimg_3.YQ4gaf.zr758cdimg_5: img#dimg_5.YQ4gaf.zr758c.wA1Bgedimg_7: img#dimg_7.YQ4gaf.zr758c.wA1Bgedimg_9: img#dimg_9.YQ4gaf.zr758c.wA1Bgedimg_11: img#dimg_11.YQ4gaf.zr758c.wA1Bgedimg_13: img#dimg_13.YQ4gaf.zr758cdimg_15: img#dimg_15.YQ4gaf.zr758cdimg_17: img#dimg_17.YQ4gaf.zr758c.wA1Bgedimg_19: img#dimg_19.YQ4gaf.zr758c.wA1Bgedimg_21: img#dimg_21.YQ4gaf.zr758c.wA1Bgedimg_23: img#dimg_23.YQ4gaf.zr758c.wA1Bgedimg_25: img#dimg_25.YQ4gaf.zr758c.wA1Bgedimg_27: img#dimg_27.YQ4gaf.zr758c.wA1Bgedimg_29: img#dimg_29.YQ4gaf.zr758c.wA1Bgedimg_31: img#dimg_31.YQ4gaf.zr758c.wA1Bgedimg_33: img#dimg_33.YQ4gaf.zr758c.wA1Bgedimg_35: img#dimg_35dimg_37: img#dimg_37dimg_39: img#dimg_39dimg_41: img#dimg_41dimg_43: img#dimg_43dimg_45: img#dimg_45dimg_47: img#dimg_47dimg_49: img#dimg_49dimg_50: img#dimg_50dimg_53: img#dimg_53dimg_55: img#dimg_55.YQ4gaf.zr758cdimg_56: img#dimg_56.YQ4gaf.zr758cdimg_59: img#dimg_59.YQ4gaf.zr758ctsuid20: img#tsuid20.kAOS0tsuid92: img#tsuid92.LV5Ktetsuid95: img#tsuid95.LV5Ktetsuid97: img#tsuid97.LV5Ktetsuid99: img#tsuid99.LV5Ktelength: 52[[Prototype]]: HTMLCollection
+// document.links
+// HTMLCollection(134) [a.gyPpGe, a#logo, a#sbfblt.oBa0Fe.aciXEb, a.gb_A, a.gb_A.gb_Ka.gb_f, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a.tGS0Nc, a, a, a.W2x9Sc, a, a, a, a, a, a.DQc04b.wHYlTd.eJtrMc.Wt5Tfe, a.DQc04b.wHYlTd.eJtrMc.Wt5Tfe, a.DQc04b.wHYlTd.Q7PwXb.eJtrMc.Wt5Tfe, a, a.l, a.l, a, a, a, a.GHDvEf, a.fl, a.fl, a, a, a, a.w13wLe, a, a.GHDvEf, a.fl, a.fl, a, a.oBa0Fe, a, a, a.PkZqAf, a.PkZqAf, a.PkZqAf, a.PkZqAf, a.PkZqAf, a.WlydOe, a.WlydOe, a.WlydOe, a.tiS4rf.Q2MMlc, a.a-no-hover-decoration.T9EeC, a, a, a, a.CjB7Ub.M6Nvye, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a.irqWwf, a, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, a.k8XOCe.R0xfCb.VCOFK.s8bAkb, …]
+// document.readyState
+// 'complete'
+// document.strictErrorChecking
+// undefined
+// document.title
+// 'wichita state university - Google Search'//
+
+
+
+
+const elm=document.createElement("div")
+elm.setAttribute("class","subha")
+console.log(elm)
+    </script>
+  </body>
+</html>

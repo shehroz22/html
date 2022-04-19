@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const myObj = {
+      //     name: "ali",
+      //     greet: function () {
+      //       console.log("hi my friend ");
+      //     },
+      //   };
+      //   console.log(Object.getPrototypeOf(myObj));
+
+      //   //creating prototype
+
+      //   const nme = {
+      //     nmes: "ali",
+      //   };
+      //   console.log(nme);
+
+      //   const fgy = Object.create(nme);
+      //   fgy.name = "sam";
+      //   console.log(fgy);
+      //   const ghg = {
+      //     cvg() {
+      //       console.log(`hi my name is ${this.name}`);
+      //     },
+      //   };
+      //   function Person(name) {
+      //     this.name = name;
+      //   }
+
+      //   Person.prototype = ghg;
+      //   console.log(Person);
+      //   Person.prototype.constructor = ghg;
+
+      //   console.log(Person);
+
+      //   function prs(name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      //   }
+      //   const bvb = new prs("aliss", "33");
+      //   console.log(bvb);
+
+      //   prs.prototype.new_age = 55;
+      //   console.log(bvb.new_age);
+      //   //   const jkl = fetch(
+      //   //     "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+      //   //   );
+      //   //   console.log(jkl);
+      //   //   jkl.then((res) => {
+      //   //     console.log(res);
+      //   //     const fgf = res.json();
+      //   //     console.log(fgf);
+      //   //     fgf.then((sh) => {
+      //   //       console.log(sh[4]);
+      //   //     });
+      //   //   });
+
+      //   //fetch api using async await
+      //   const lol = async () => {
+      //     const fdt = await fetch(
+      //       "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+      //     );
+      //     console.log(fdt);
+
+      //     const gft = fdt.json();
+      //     console.log(gft);
+      //     const rty = await gft;
+      //     console.log(rty);
+      //     console.log(rty[7]);
+      //   };
+
+      //   lol();
+
+      //callback
+      //   const myfr = () => {
+      //     console.log("hi i am ali");
+      //   };
+      //   const myfr2 = () => {
+      //     console.log("hi i am shehroz");
+      //   };
+      //   myfr();
+      //   myfr2();
+      //   const myfr = () => {
+      //     setTimeout(() => {
+      //       console.log("hi i am ali");
+      //     }, 2000);
+      //   };
+      //   const myfr2 = () => {
+      //     console.log("hi i am shehroz");
+      //   };
+      //   myfr();
+      //   myfr2();
+
+      //
+      //   const myfr = (age, callBack) => {
+      //     console.log(`hi i am ali i am ${age} old`);
+
+      //     callBack();
+      //   };
+
+      //   const myfr2 = () => {
+      //     console.log("hi i am shehroz");
+      //   };
+      //   myfr("13", myfr2);
+      const grgt = new Promise((resolve, reject) => {
+        const arwr = [1, 2, 3, 4, 5, 6];
+        resolve(arwr);
+        // reject("its rejcted");
+      }, 6000);
+
+      //   grgt.catch((error) => {
+      //     console.log(error);
+      //   });
+      //   grgt.then((arwr) => {
+      //     console.log(arwr);
+      //     console.log(arwr[2]);
+      //   });
+
+      async function dgyg() {
+        const fyty = await grgt;
+        console.log(fyty);
+      }
+      dgyg();
+    </script>
+  </body>
+</html>

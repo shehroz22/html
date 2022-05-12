@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="input" max="100" />
+    <button onclick="dothis()">click</button>
+    <p id="show"></p>
+    <script>
+      var input = document.getElementById("input");
+      const dothis = () => {
+        if (!input.checkValidity()) {
+          document.getElementById("show").innerHTML = input.validationMessage;
+        }
+      };
+
+      const successCallback = (position) => {
+        console.log(position);
+      };
+      const errorCallback = (error) => {
+        console.error(error);
+      };
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    </script>
+  </body>
+</html>

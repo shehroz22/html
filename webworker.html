@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="calc">calculate</button>
+    <button id="change">change background</button>
+  </body>
+  <script>
+    const worker = new Worker("worker.js");
+    const calcbtn = document.querySelector("#calc");
+    const changebtf = document.querySelector("#change");
+    calcbtn.addEventListener("click", (event) => {
+      //   let sum = 0;
+      //   for (let i = 0; i < 100000000; i++) sum += i;
+      //   alert(`alert is${sum}`);
+      worker.postMessage("hi how are you");
+    });
+    worker.onmessage = (message) => {
+      alert(`alert is${message.data}`);
+    };
+    changebtf.addEventListener("click", (event) => {
+      if (document.body.style.backgroundColor !== "green") {
+        document.body.style.backgroundColor = "green";
+      } else {
+        document.body.style.backgroundColor = "orange";
+      }
+    });
+  </script>
+</html>

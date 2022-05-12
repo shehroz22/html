@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="input" max="100" />
+    <button onclick="validate()" id="btn">validate</button>
+    <p id="result"></p>
+    <script>
+      function validate() {
+        var rst = document.getElementById("input");
+
+        if (!rst.checkValidity()) {
+          document.getElementById("result").innerHTML = input.validationMessage;
+        }
+      }
+      const success = (position) => {
+        console.log(position);
+      };
+      const checkError = (error) => {
+        console.log(error);
+      };
+      //   navigator.geolocation.getCurrentPosition(success, checkError);
+      navigator.geolocation.watchPosition(success, checkError, {
+        timeout: 5000,
+        enableHighAccuracy: true,
+      });
+    </script>
+  </body>
+</html>

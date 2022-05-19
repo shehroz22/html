@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //json format
+      const json = '{"name":"ali" ,"class":"five"}';
+      console.log(typeof json);
+      const bbj = JSON.parse(json);
+      console.log(typeof bbj);
+      const abj = ['{"name":"mhrx","class":"eight"}'];
+      console.log(typeof abj);
+      const cnv = JSON.stringify(abj);
+      console.log(typeof cnv);
+
+      const text = '{"name":"grace","birth":"1989-24-06"}';
+      const obj = JSON.parse(text);
+
+      const dothis = (key, value) => {
+        if (key == "birth") {
+          return new Date(value);
+        } else {
+          return value;
+        }
+      };
+      console.log(obj, dothis);
+      console.log(obj.birth);
+    </script>
+  </body>
+</html>

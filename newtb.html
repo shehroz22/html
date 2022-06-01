@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        background-color: rgb(188, 186, 186);
+        border: 2px solid black;
+        margin: 40px;
+        margin-left: 400px;
+        width: 500px;
+      }
+      body {
+        margin: 0%;
+        padding: 0%;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    //
+
+    <h1
+      style="
+        margin-top: 0%;
+        border: 2px solid black;
+        font-size: 50px;
+        text-align: center;
+        background-color: grey;
+      "
+    >
+      Student Data
+    </h1>
+
+    <input
+      type="search"
+      placeholder="search.."
+      name="q"
+      id="myInput"
+      onkeyup="searchTable()"
+    />
+
+    <table id="myTable">
+      <thead id="hd">
+        <tr>
+          <th>No#</th>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Age</th>
+          <th>Number</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody id="bdy"></tbody>
+    </table>
+    //
+
+    <script>
+      function searchTable() {
+        var input, filter, found, table, tr, td, i, j;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td");
+          for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+              found = true;
+            }
+          }
+          if (found) {
+            tr[i].style.display = "";
+            found = false;
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+
+      //
+
+      const Student = [
+        {
+          name: "Anthony",
+          class: "A5",
+          age: "32",
+          Number: "343535",
+          Grade: "F",
+        },
+        {
+          name: "Ali",
+          class: "A2",
+          age: "72",
+          Number: "87263",
+          Grade: "D",
+        },
+        {
+          name: "Miranda",
+          class: "A3",
+          age: "42",
+          Number: "6263",
+          Grade: "D",
+        },
+        {
+          name: "weud",
+          class: "A4",
+          age: "62",
+          Number: "B5263",
+          Grade: "D",
+        },
+        {
+          name: "Oliver",
+          class: "A8",
+          age: "52",
+          Number: "63563",
+          Grade: "D",
+        },
+        {
+          name: "Luca",
+          class: "A0",
+          age: "32",
+          Number: "38578",
+          Grade: "D",
+        },
+        {
+          name: "Hamza",
+          class: "A1",
+          age: "32",
+          Number: "532",
+          Grade: "D",
+        },
+        {
+          name: "Mushtaq",
+          class: "B5",
+          age: "92",
+          Number: "2424",
+          Grade: "C",
+        },
+        {
+          name: "peter",
+          class: "C5",
+          age: "52",
+          Number: "54563",
+          Grade: "E",
+        },
+        {
+          name: "haris",
+          class: "F5",
+          age: "58",
+          Number: "1313",
+          Grade: "D",
+        },
+      ];
+
+      for (let index = 0; index < Student.length; index++) {
+        const element = Student[index];
+        console.log(element);
+
+        ////////////////
+        let c = document.getElementById("bdy");
+        let rmn = (c.innerHTML += `
+              <tr >
+                <td>${index + 1}</td>
+                  <td>${element.name}</td>
+                  <td>${element.class}</td>
+                  <td>${element.age}</td>
+                  <td>${element.Number}</td>
+                  <td>${element.Grade}</td>
+                </tr>
+
+
+
+        `);
+        //   console.log(element);
+      }
+    </script>
+  </body>
+</html>

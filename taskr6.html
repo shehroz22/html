@@ -14,11 +14,11 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-success">
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <form action="" class="card p-1 mt-2" onsubmit="getData(this)">
+          <form action="" class="card p-1 mt-2" onsubmit="getData()">
             <div class="m-4">
               <label for="" class="form-label">name</label>
               <input type="text" class="form-control" name="name" id="name" />
@@ -50,11 +50,7 @@
               </tr>
             </thead>
             <tbody id="tbody">
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>
@@ -70,59 +66,130 @@
       </div>
     </div>
 
-    <!-- JavaScript Bundle with Popper -->
+  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
     <script>
-      const data = [];
+   
+   
+   
+         
+   const data = [];
+  
+  
+   
+       
 
       const getData = (e) => {
         event.preventDefault();
-        // const form  = document.getElementById('signup');
-        // const data = new FormData(e.target)
-        // // const data = new FormData(event.target);
-        // console.log(data)
-
-        // console.log(e)
 
         const name = document.getElementById("name").value;
         const age = document.getElementById("age").value;
-        const person = {
-          name: name,
-          age: age,
-        };
 
-        data.push(person);
-       showData(data)
-      };
-
-      const showData = (data) => {
-          i=0;
-        data.forEach((element) => {
-            
+      const newdata = data.push({name: name, age:age})
+    document.getElementById("tbody").innerHTML  ="";
+       
+        data.forEach((element, i) => {
+        
           const tbody = document.getElementById("tbody");
           
-
+          console.log(element, i)
+         
           const box = `
+  
                     <tr>
-                        <th scope="row">${i++}</th>
+                        <th>${i}</th>
                         <td>${element.name}</td>
                         <td>${element.age}</td>
+                       
                       </tr>
+                      
             `;
-          tbody.innerHTML += box;
+          tbody.innerHTML += box
          
-        });
+        })
+ 
+      
+       //console.log(data)
+// showData()
+
+//
+  
+// for (let index = 0; index < data.length; index++) {
+//     const element = data[index];
+//     const tbody = document.getElementById("tbody");
+//     console.log(element)
+          
+
+//    let mn= tbody.innerHTML += `
+//                       <tr>
+//                           <td >${index+1}</td>
+//                           <td>${name}</td>
+//                           <td>${age}</td>
+                         
+//                         </tr>
+                        
+//               `;
+               
+    
+// }
+// // 
+      
+    //   const showData = () => {
+
+       
+
+
+    //       i=0;
+    //     data.forEach((element) => {
+            
+            
+    //       const tbody = document.getElementById("tbody");
+          
+
+    //       const box = `
+    //                 <tr>
+    //                     <th scope="row">${i++}</th>
+    //                     <td>${element.name}</td>
+    //                     <td>${element.age}</td>
+                       
+    //                   </tr>
+                      
+    //         `;
+    //       tbody.innerHTML += box;
+         
+    //     })}
+
+// for (let index = 0; index < data.length; index++) {
+//     const element = data[index];
+//     const tbody = document.getElementById("tbody");
+//     console.log(element)
+          
+
+//     tbody.innerHTML += `
+//                       <tr>
+//                           <th scope="row">${index+1}</th>
+//                           <td>${element.name}</td>
+//                           <td>${element.age}</td>
+                         
+//                         </tr>
+                        
+//               `;
+               
+    
+// }
+      
       };
+
 
       function searchTable() {
         var input, filter, found, table, tr, td, i, j;
         input = document.getElementById("form1");
         filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
+        table = document.getElementById("tbody");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
           td = tr[i].getElementsByTagName("td");
@@ -139,6 +206,7 @@
           }
         }
       }
+    
     </script>
   </body>
 </html>

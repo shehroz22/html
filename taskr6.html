@@ -74,25 +74,33 @@
     ></script>
     <script>
    
-   
-   
+   const data =[]
+ 
          
-   const data = [];
+  //  const data=JSON.parse(localStorage.getItem("data")) || []
   
   
-   
-       
+    
 
       const getData = (e) => {
         event.preventDefault();
 
+        
+       
+  
         const name = document.getElementById("name").value;
         const age = document.getElementById("age").value;
-
+      
+      
       const newdata = data.push({name: name, age:age})
+      localStorage.setItem("data",JSON.stringify(data))
     document.getElementById("tbody").innerHTML  ="";
+
+    
+ 
        
         data.forEach((element, i) => {
+        
         
           const tbody = document.getElementById("tbody");
           
@@ -109,11 +117,11 @@
                       
             `;
           tbody.innerHTML += box
-         
+                    
         })
- 
       
-       //console.log(data)
+      
+       console.log(data)
 // showData()
 
 //

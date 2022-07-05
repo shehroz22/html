@@ -92,20 +92,28 @@
       </table>
     </div>
     <script>
+      // const listi = [
+      //   {
+      //     name: `${nm}`,
+      //     lstname: `${lastname}`,
+      //     rollnmb: `${RollNumber}`,
+      //     grde: `${grade}`,
+      //   },
+      // ];
       pert = () => {
         event.preventDefault();
         const nm = document.getElementById("name").value;
         const lastname = document.getElementById("lst").value;
         const RollNumber = document.getElementById("roll").value;
         const grade = document.getElementById("grd").value;
-        const listi = [
-          {
-            name: `${nm}`,
-            lstname: `${lastname}`,
-            rollnmb: `${RollNumber}`,
-            grde: `${grade}`,
-          },
-        ];
+        // const listi = [
+        //   {
+        //     name: `${nm}`,
+        //     lstname: `${lastname}`,
+        //     rollnmb: `${RollNumber}`,
+        //     grde: `${grade}`,
+        //   },
+        // ];
         for (let index = 0; index < listi.length; index++) {
           const element = listi[index];
           console.log(element);
